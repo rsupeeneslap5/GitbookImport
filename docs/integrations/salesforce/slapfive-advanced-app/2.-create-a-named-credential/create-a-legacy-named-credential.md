@@ -1,0 +1,27 @@
+---
+description: >-
+  In this step, you create a Named Credential record that let's Salesforce
+  access the SlapFive API.
+---
+
+# Create a Legacy Named Credential
+
+Go to **Setup** > **Security** > **Named Credentials**.&#x20;
+
+In the dropdown menu next to the **New** button, click **New Legacy** to create a new Named Credential record.
+
+<figure><img src="../../../../.gitbook/assets/Screenshot 2022-10-28 163643.png" alt=""><figcaption><p>Create a new Named Credential record</p></figcaption></figure>
+
+When creating the new record:
+
+* [ ] **Label:** enter _SlapFive API_.
+* [ ] **Name:** will auto-fill with _SlapFive\_API_, do not change it.
+* [ ] **URL:** enter the base URL of your SlapFive instance, which is https://your\_company\_name.slapfive.com.
+* [ ] **Identity Type:** select **Named Principal**.
+* [ ] **Authentication Protocol:** select **Password Authentication**.
+* [ ] **Username:** enter _slapfive_.
+* [ ] **Password:** paste your **SlapFive API Key**. To get this key, log into SlapFive, go into your Client Settings, generate an API key if one doesn't already exist, copy the API Key and paste it in this field.
+* [ ] **Generate Authorization Header:** uncheck this field.
+* [ ] **Allow Merge Fields in HTTP Header:** check this field.
+
+Click the **Save** button to create the new Named Credential.
