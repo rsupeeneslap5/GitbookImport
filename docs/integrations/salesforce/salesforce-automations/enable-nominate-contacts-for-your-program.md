@@ -9,10 +9,11 @@ description: >-
 
 ## Architecture (at a glance)
 
-* **Screen Flow** → captures user input
-* **Custom Object** → stores the nomination
-* **Outbound Message** → sends data to integration server
-* **Integration Server Recipe** → processes the nomination
+* **Screen Flow** → captures user input and creates a nomination record
+* **Custom Object** → stores the nomination data
+* **Record-Triggered Flow** → sends the nomination data to SlapFive
+* **Outbound Message** → delivers the nomination data to the SlapFive integration server to trigger the automated workflow
+* **Automated Workflow** → processes the nomination
 
 ## How to set it up
 
@@ -25,7 +26,7 @@ Go to **Setup → Objects and Fields → Object Manager** and click **Create →
 **Object Name:** `SlapFive Nomination`\
 **API Name:** `SlapFive_Nomination__c`
 
-Create the following fields and save the object:
+#### Create the following fields and save the object:
 
 1. **Contact**
    * Type: Lookup (Contact)
@@ -46,7 +47,15 @@ Create the following fields and save the object:
      * Submitted
      * Processed
      * Error
-   * Default Value: `Submitted`
+   * Default Value: `Submitted`&#x20;
+
+#### Object Permissions
+
+Users who will submit nominations must have permission to create records for the SlapFive Nomination object.
+
+This can be done by adding Create permission for the SlapFive\_Nomination\_\_c object in the user’s Profile or a Permission Set.
+
+Alternatively, administrators can configure the Screen Flow to run in system context so that users do not need direct object permissions.
 
 ### Step 2: Create the Outbound Message
 
@@ -67,7 +76,25 @@ Select **Fields to Send**:
 
 Save and **Activate** the Outbound Message.
 
-### Step 3: Create the Screen Flow
+### Step 3: Create the Record-Triggered Flow
+
+Go to **Setup** → **Flows** → **New Flow** and select **Record-Triggered Flow**.
+
+#### Configure the Flow:
+
+* **Object:** SlapFive\_Nomination\_\_c
+* **Trigger the Flow When:** A record is created
+* **Optimize the Flow For:** Actions and Related Records (After Save)
+
+#### Add an Action element:
+
+* **Action Type:** Send Outbound Message
+* Select the Outbound Message you created in the previous step.
+* **Label:** Send SlapFive Nomination
+
+Save and **Activate** the Flow.
+
+### Step 4: Create the Screen Flow
 
 Go to **Setup → Flows → New Flow → Screen Flow,** create the variable and add these elements, then Save and **Activate** the Flow.&#x20;
 
@@ -105,15 +132,15 @@ Add a final Screen:
 
 * Message: _Nomination submitted successfully._
 
-### Step 4: Add the Flow to the Contact Page
+### Step 5: Add the Screen Flow to the Contact Page
 
 Go to **Object Manager → Contact → Page Layouts**
 
 1. Open the desired page layout.
 2. In **Salesforce Mobile and Lightning Experience Actions**, drag **Flow.**
-3. Select the Flow you just created.
+3. Select the Screen Flow you just created.
 4. Save
 
-### Step 5: Submit a test nomination
+### Step 6: Submit a test nomination
 
 Go to a Contact record, click the new Nomination button, and let your SlapFive Coach know so we can do the final configurations and activate the automation.

@@ -355,6 +355,8 @@ When updating by id, you can pass a different salesforceContactId to update that
 "inviteStatus":"Member",\
 "engagementNote":"This text is added to the bottom of the Engagement Note field",\
 "engagementNoteReplace":"This text replaces what is in the engagementNote field.",\
+"nominatedBy":"Fred Johnson",\
+"nominatedDate":"",\
 "dynamicFields": {\
 &#x20;     "fieldName1": "value",\
 &#x20;     "fieldName2":"value",\
@@ -393,9 +395,7 @@ When updating by id, you can pass a different salesforceContactId to update that
 "companyEngagementNotes": "This text is added to the bottom of the Engagement Notes field",\
 "companyEngagementNotesReplace": "This text replaces what is in the Engagement Notes field",\
 "companySalesforceAccountId":"4GH876JhG9765763",\
-"companyMatchingField1":"Tier 2",\
-"companyMatchingField2":"Manufacturing",\
-"companyMatchingField3":"Any value",\
+"companyTrustedContacts":"joesmith@abc.com, bettyjones@xyz.com",\
 "companyDynamicFields": {\
 &#x20;     "fieldName1": "value",\
 &#x20;     "fieldName2":"value",\
