@@ -324,9 +324,9 @@ If a Member record exists with the id, email or salesforceContactId provided, it
 Method: POST\
 URL: https://your\_company.slapfive.com/api/api/customers/\
 Required for updating a Member: id OR email OR salesforceContactId.\
-Required for creating new Member: email, fname, lname, companyName.
-
-When updating by id, you can pass a different salesforceContactId to update that field, and pass a different companyName to associate the Member with that Company.
+Required for creating new Member: email, fname, lname, companyName.\
+Required for updating the Member's salesforceContactId: id, new salesforceContactId.\
+Required for associating the Member with a different Company: id, new companyName.
 
 **Sample JSON request data:**
 
@@ -465,7 +465,9 @@ If a Company record exists with the name or salesforceAccountId provided, it upd
 Method: POST\
 URL: https://your\_company.slapfive.com/api/api/companies/\
 Required for updating a Company: name OR salesforceAccountId\
-Required for creating new Member: name
+Required for creating new Member: name\
+Required for updating the Company's name: id, new name.\
+Required for updating the Company's salesforceAccountId: id, new salesforceAccountId.
 
 **Sample JSON request data:**
 
@@ -576,7 +578,7 @@ If an Activity record exists for the id provided, it updates that record, otherw
 Method: POST\
 URL: https://your\_company.slapfive.com/api/api/activity/\
 Required for creating new Activity: email or customerId, activityName, date\
-Required for updating Activity: id, email
+Required for updating Activity: id
 
 **Sample JSON request data:**
 
