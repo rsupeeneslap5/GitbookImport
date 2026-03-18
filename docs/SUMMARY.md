@@ -109,6 +109,7 @@
   * [Trigger an automated workflow from Gainsight](integrations/gainsight-cs/trigger-an-automated-workflow-from-gainsight.md)
 * [Gong](integrations/gong/README.md)
   * [Connect to Gong](integrations/gong/connect-to-gong.md)
+  * [Determine which calls to analyze](integrations/gong/determine-which-calls-to-analyze.md)
 * [Google](integrations/google/README.md)
   * [Connect to Gmail](integrations/google/connect-to-gmail.md)
 * [Gradual](integrations/gradual/README.md)
