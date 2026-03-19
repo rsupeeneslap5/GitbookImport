@@ -325,8 +325,13 @@ Method: POST\
 URL: https://your\_company.slapfive.com/api/api/customers/\
 Required for updating a Member: id OR email OR salesforceContactId.\
 Required for creating new Member: email, fname, lname, companyName.\
-Required for updating the Member's salesforceContactId: id, new salesforceContactId.\
-Required for associating the Member with a different Company: id, new companyName.
+Required for updating the Member's salesforceContactId: id, new salesforceContactId.
+
+Logic for associating Member with Company:
+
+* If the companyName and/or companySalesforceAccountId MATCH either of those values for the Company that the Member currently belongs to, keep the Member attached to that Company.
+* If the companyName and/or companySalesforceAccountId DO NOT MATCH either of those values for the Company that the Member currently belongs to, but MATCH another Company, associate the Member with that matching Company.
+* If the companyName and/or companySalesforceAccountId DO NOT MATCH either of those values for the Company that the Member currently belongs to, and DO NOT MATCH another Company, create a new Company and associate the Member with that new Company.
 
 **Sample JSON request data:**
 
