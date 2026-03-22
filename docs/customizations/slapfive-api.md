@@ -342,7 +342,9 @@ Logic for associating Member with Company:
 "lname":"Smith",\
 "companyName":"ABC Industries",\
 "phone":"616.765.6787",\
+"phoneCountryCode":"US",\
 "title":"VP of Marketing",\
+"functionalRole":"Marketing",\
 "avatarImageUrl":"https://www.anyimageurl.com",\
 "activityTypesWillingToDo": \[\
 &#x20;     "Speak with an industry analyst", "Take a Reference call", "Network with peers"\
