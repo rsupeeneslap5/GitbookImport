@@ -759,10 +759,11 @@ If a Request Fulfillment Member record exists for the id provided, it updates th
 
 Method: POST\
 URL: https://your\_company.slapfive.com/api/api/requestFulfillmentCustomers/\
-Required: \
+Required for creating new Fulfillment Member/Company: \
 &#x20;   request\_number or request\_id;\
 &#x20;   customer\_email, customer\_id, or customer\_salesforceContactId;\
-&#x20;   company\_name, company\_id, or company\_salesforceAccountId;
+&#x20;   company\_name, company\_id, or company\_salesforceAccountId;\
+Required for updating Fulfillment Member/Company: id
 
 **Sample JSON request data:**
 
