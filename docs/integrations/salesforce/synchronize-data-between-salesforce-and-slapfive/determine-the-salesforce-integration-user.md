@@ -34,7 +34,7 @@ In addition, the Integration User needs access to the setup objects used by the 
 
 * [ ] The Named Credential with Name = SlapFive\_API
 * [ ] The SlapFive Settings object
-* [ ] The SlapFive Connected App
+* [ ] The SlapFive Custom Metadata Types
 
 ### Restrict Integration User to IP addresses or ranges
 
