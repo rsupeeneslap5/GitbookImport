@@ -99,7 +99,7 @@ Example:
 }
 ```
 
-### Step 4: Test the automationIntegration
+### Step 4: Test the automation
 
 1. Submit a test response in Microsoft Forms
 2. Check: Power Automate flow run history → should succeed
