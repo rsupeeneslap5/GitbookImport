@@ -129,6 +129,8 @@
 * [Marketo](integrations/marketo/README.md)
   * [Connect to Marketo](integrations/marketo/connect-to-marketo.md)
 * [Microsoft](integrations/microsoft/README.md)
+  * [Forms](integrations/microsoft/forms/README.md)
+    * [Set up Microsoft Forms automation](integrations/microsoft/forms/set-up-microsoft-forms-automation.md)
   * [Outlook (Microsoft 365)](integrations/microsoft/outlook-microsoft-365/README.md)
     * [Connect to Outlook](integrations/microsoft/outlook-microsoft-365/connect-to-outlook.md)
   * [Sharepoint](integrations/microsoft/sharepoint/README.md)
