@@ -106,6 +106,7 @@
   * [Connect to Gainsight CC (Insided)](integrations/gainsight-cc-insided/connect-to-gainsight-cc-insided.md)
 * [Gainsight CS](integrations/gainsight-cs/README.md)
   * [Connect to Gainsight CS](integrations/gainsight-cs/connect-to-gainsight-cs.md)
+  * [Trigger an automated workflow from Gainsight health score changes](integrations/gainsight-cs/trigger-an-automated-workflow-from-gainsight-health-score-changes.md)
   * [Trigger an automated workflow from Gainsight](integrations/gainsight-cs/trigger-an-automated-workflow-from-gainsight.md)
 * [Gong](integrations/gong/README.md)
   * [Connect to Gong](integrations/gong/connect-to-gong.md)
