@@ -171,9 +171,7 @@ c. Remedies. The parties agree that (i) solely the Customer entity that is the c
 
 d. Other rights. The parties agree that you will, when reviewing our compliance with this DPA pursuant to the ‘Demonstration of Compliance’ section, take all reasonable measures to limit any impact on us and our Affiliates by combining several audit requests carried out on behalf of the Customer entity that is the contracting party to the Agreement and all of its Permitted Affiliates in one single audit.
 
-&#x20;
-
-**Annex 1 - Details of Processing**
+### **Annex 1 - Details of Processing**
 
 **A. List of Parties**
 
@@ -241,11 +239,9 @@ Subject to the 'Deletion or Return of Personal Data' section of this DPA, we wil
 
 **C. Competent Supervisory Authority**
 
-For the purposes of the Standard Contractual Clauses, the supervisory authority that shall act as competent supervisory authority is either (i) where Customer is established in an EU Member State, the supervisory authority responsible for ensuring Customer's compliance with the GDPR; (ii) where Customer is not established in an EU Member State but falls within the extra-territorial scope of the GDPR and has appointed a representative, the supervisory authority of the EU Member State in which Customer's representative is established; or (iii) where Customer is not established in an EU Member State but falls within the extra-territorial scope of the GDPR without having to appoint a representative, the supervisory authority of the EU Member State in which the Data Subjects are predominantly located. In relation to Personal Data that is subject to the UK GDPR or Swiss DPA, the competent supervisory authority is the UK Information Commissioner or the Swiss Federal Data Protection and Information Commissioner (as applicable).
+For the purposes of the Standard Contractual Clauses, the supervisory authority that shall act as competent supervisory authority is either (i) where Customer is established in an EU Member State, the supervisory authority responsible for ensuring Customer's compliance with the GDPR; (ii) where Customer is not established in an EU Member State but falls within the extra-territorial scope of the GDPR and has appointed a representative, the supervisory authority of the EU Member State in which Customer's representative is established; or (iii) where Customer is not established in an EU Member State but falls within the extra-territorial scope of the GDPR without having to appoint a representative, the supervisory authority of the EU Member State in which the Data Subjects are predominantly located. In relation to Personal Data that is subject to the UK GDPR or Swiss DPA, the competent supervisory authority is the UK Information Commissioner or the Swiss Federal Data Protection and Information Commissioner (as applicable).&#x20;
 
-&#x20;
-
-**Annex 2 - Security Measures**
+### **Annex 2 - Security Measures**
 
 This Annex forms part of the DPA.
 
@@ -303,13 +299,9 @@ Fault tolerance: Backup and replication strategies are designed to ensure redund
 
 Online replicas and backups: Where feasible, production databases are designed to replicate data between no less than 1 primary and 1 secondary database. All databases are backed up and maintained using at least industry standard methods.
 
-Our products are designed to ensure redundancy and seamless failover. The server instances that support the products are also architected with a goal to prevent single points of failure. This design assists our operations in maintaining and updating the product applications and backend while limiting downtime.
+Our products are designed to ensure redundancy and seamless failover. The server instances that support the products are also architected with a goal to prevent single points of failure. This design assists our operations in maintaining and updating the product applications and backend while limiting downtime.&#x20;
 
-&#x20;
-
-&#x20;
-
-**Annex 3 - List of Sub-Processors**
+### **Annex 3 - List of Sub-Processors**
 
 | **Third Party Sub-Processor** | **Purpose**                | **Applicable Service**                                                                   |
 | ----------------------------- | -------------------------- | ---------------------------------------------------------------------------------------- |
@@ -320,11 +312,7 @@ Our products are designed to ensure redundancy and seamless failover. The server
 | Twilio, Inc.                  | Messaging                  | Sending SMS messages from SlapFive                                                       |
 |                               |                            |                                                                                          |
 
-&#x20;
-
-&#x20;
-
-**Annex 4 – Standard Contractual Clauses**&#x20;
+### &#x20;**Annex 4 – Standard Contractual Clauses**&#x20;
 
 **Module Two: Transfer Controller to Processor (C2P)**
 
@@ -410,9 +398,7 @@ _**Docking clause**_
 
 (b) Once it has completed the Appendix and signed Annex I.A, the acceding entity shall become a Party to these Clauses and have the rights and obligations of a data exporter or data importer in accordance with its designation in Annex I.A.
 
-(c) The acceding entity shall have no rights or obligations arising under these Clauses from the period prior to becoming a Party.
-
-&#x20;
+(c) The acceding entity shall have no rights or obligations arising under these Clauses from the period prior to becoming a Party.&#x20;
 
 **SECTION II - OBLIGATIONS OF THE PARTIES**
 
