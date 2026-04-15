@@ -2,7 +2,7 @@
 
 ## SlapFive Data Processing Agreement
 
-Last updated: October 20, 2023
+Last updated: October 20, 2025
 
 This SlapFive Data Processing Agreement and its Annexes (“DPA”) reflects the parties’ agreement with respect to the Processing of Personal Data by us on behalf of you in connection with the SlapFive Subscription Services under the **SlapFive Master Service Agreement** between you and us (also referred to in this DPA as the “Agreement”).
 
@@ -311,13 +311,14 @@ Our products are designed to ensure redundancy and seamless failover. The server
 
 **Annex 3 - List of Sub-Processors**
 
-| **Third Party Sub-Processor** | **Purpose**              | **Applicable Service**                                                          |
-| ----------------------------- | ------------------------ | ------------------------------------------------------------------------------- |
-| Google, Inc.                  | Regional Data Processing | Data hosting provider                                                           |
-| Auth0                         | Authentication           | Used for SlapFive authentication and user provisioning                          |
-| Twilio, Inc.                  | Messaging                | Used for sending SMS messages from SlapFive                                     |
-| Mailgun                       | Email Service            | Used for sending emails from SlapFive                                           |
-| Zapier                        | Data Synchronization     | Synchronizing data between SlapFive and other apps like Salesforce or Gainsight |
+| **Third Party Sub-Processor** | **Purpose**                | **Applicable Service**                                                                   |
+| ----------------------------- | -------------------------- | ---------------------------------------------------------------------------------------- |
+| Google, Inc.                  | Regional Data Processing   | Data hosting provider                                                                    |
+| Auth0                         | Authentication             | SlapFive user authentication and user provisioning                                       |
+| Workato, Inc.                 | Integration and Automation | Synchronizing data between SlapFive and other apps and orchestrating automated workflows |
+| Mailgun                       | Email Service              | Sending emails from SlapFive                                                             |
+| Twilio, Inc.                  | Messaging                  | Sending SMS messages from SlapFive                                                       |
+|                               |                            |                                                                                          |
 
 &#x20;
 

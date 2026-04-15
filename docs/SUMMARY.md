@@ -4,6 +4,7 @@
   * [SlapFive Explained](getting-started/slapfive-explained.md)
   * [SlapFive Terminology](getting-started/slapfive-terminology.md)
   * [SlapFive Data Model](getting-started/slapfive-data-model.md)
+  * [Architecture Diagram](getting-started/architecture-diagram.md)
   * [SlapFive Best Practices](getting-started/slapfive-best-practices/README.md)
     * [SlapFive Successful Launch Plan](getting-started/slapfive-best-practices/slapfive-successful-launch-plan/README.md)
       * [Workshops Defined](getting-started/slapfive-best-practices/slapfive-successful-launch-plan/workshops-defined.md)
@@ -33,6 +34,7 @@
       * [View Companies and Permissions](getting-started/slapfive-best-practices/slapfive-sfdc-app/view-companies-and-permissions.md)
       * [Nominate an Advocate](getting-started/slapfive-best-practices/slapfive-sfdc-app/nominate-an-advocate.md)
       * [Track Influenced Events](getting-started/slapfive-best-practices/slapfive-sfdc-app/track-influenced-events.md)
+  * [How SlapFive uses Workato](getting-started/how-slapfive-uses-workato.md)
 
 ## INTEGRATIONS
 
