@@ -32,9 +32,10 @@ The Embedded Integration with Salesforce requires you to establish a Salesforce 
 
 In addition, the Integration User needs access to the setup objects used by the SlapFive Salesforce App:
 
-* [ ] The Named Credential with Name = SlapFive\_API
-* [ ] The SlapFive Settings object
-* [ ] The SlapFive Custom Metadata Types
+* [ ] Named Credential with Name = SlapFive\_API
+* [ ] SlapFive Settings object
+* [ ] SlapFive Custom Metadata Types
+* [ ] Assigned the SlapFive API Permission Set
 
 ### Restrict Integration User to IP addresses or ranges
 
