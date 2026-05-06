@@ -12,7 +12,7 @@ When a new request comes in open it up and review details - update the status to
 
 <figure><img src="https://lh6.googleusercontent.com/uLYCQwPgcJmZneDUQl3mpbRglCpMA09UNGBSyc5uG1k0rJaEMXsevC9Y4GfsG4khXR_InmZ5DXSBHZkw1S5dzVqJKFTtO_z8gKkhn_BE9jKeXroNFZUDdVPb34XRgBeqTs4FAkkEb5z4hznfXdfu-gs" alt=""><figcaption><p>Change the Request Status to In Progress</p></figcaption></figure>
 
-
+> Note: _The Fulfillment Compainies/Memebers_ is only available once the status has been set to **In Progress**
 
 Next your Fulfillment screen opens up.  Here you are now able to click **Select Companies/Members** to use search or filter or simply **+Add** a row to then select a Member and/or Company.
 
