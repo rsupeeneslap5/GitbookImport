@@ -56,6 +56,8 @@ You can also specify the names of fields from related objects, like this example
 
 ## Available API endpoints
 
+***
+
 ### Boards
 
 #### Get all Boards
@@ -169,6 +171,8 @@ Delete a Board record by id.
 Method: DELETE\
 URL: https://your\_company.slapfive.com/api/api/boards/\<id>
 
+***
+
 ### Stories
 
 #### Get all Stories
@@ -279,6 +283,8 @@ Delete a Story record by id.
 
 Method: DELETE\
 URL: https://your\_company.slapfive.com/api/api/stories/\<id>
+
+***
 
 ### Members
 
@@ -434,6 +440,8 @@ Delete a Member record by id.
 Method: DELETE\
 URL: https://your\_company.slapfive.com/api/api/customers/\<id>
 
+***
+
 ### Companies
 
 #### Get all Companies
@@ -550,6 +558,8 @@ Delete a Company record by id.
 Method: DELETE\
 URL: https://your\_company.slapfive.com/api/api/companies/\<id>
 
+***
+
 ### Activities
 
 #### Get all Activities
@@ -631,6 +641,8 @@ Delete an Activity record by id.
 
 Method: DELETE\
 URL: https://your\_company.slapfive.com/api/api/activity/\<id>
+
+***
 
 ### Requests
 
@@ -724,6 +736,8 @@ Delete a Request record by id.
 Method: DELETE\
 URL: https://your\_company.slapfive.com/api/api/requests/\<id>
 
+***
+
 ### Request Fulfillment Members/Companies
 
 #### Get all Request Fulfillment Members/Companies
@@ -815,6 +829,8 @@ Required for updating Fulfillment Member/Company: id
 &#x20;    }\
 }
 
+***
+
 ### Request Fulfillment Boards
 
 #### Get all Request Fulfillment Boards
@@ -858,6 +874,8 @@ body: {\
 ‘webhook\_url’: the URL that was subscribed\
 }
 
+***
+
 ### Campaigns
 
 #### Get all Campaigns
@@ -890,6 +908,8 @@ URL: https://slapfive.slapfive.com/api/webhooks/unsubscribe
 body: {\
 ‘webhook\_url’: the URL that was subscribed\
 }
+
+***
 
 ### Campaign Items
 
@@ -944,6 +964,8 @@ Required Body Parameters: the object "entities" with name/value pairs in which t
 &#x20; }\
 }
 
+***
+
 ### Content Shares
 
 #### Get all Content Shares
@@ -983,6 +1005,8 @@ Delete a Content Share record by id.
 
 Method: DELETE\
 URL: https://your\_company.slapfive.com/api/api/shares/\<id>
+
+***
 
 ### Content Views
 
@@ -1024,6 +1048,22 @@ Delete a Content View record by id.
 Method: DELETE\
 URL: https://your\_company.slapfive.com/api/api/pageViews/\<id>
 
+***
+
+### Surveys
+
+#### Get a Survey and its Responses by ID
+
+Method: GET\
+URL: https://your\_company.slapfive.com/api/api/sentSurvey/\<id>
+
+#### Get a Survey's Responses by ID
+
+Method: GET\
+URL: https://your\_company.slapfive.com/api/api/sentSurvey/\<id>/responses
+
+***
+
 ### Prompts
 
 #### Get all Prompts
@@ -1050,8 +1090,6 @@ Delete a Prompt record by id.
 
 Method: DELETE\
 URL: https://your\_company.slapfive.com/api/api/prompts/\<id>
-
-### Prompt Responses
 
 #### Webhook for new Prompt Response
 
@@ -1090,6 +1128,8 @@ URL: https://your\_company.slapfive.com/api/api/sent-prompts/\<id>
 
 Method: GET\
 URL: https://your\_company.slapfive.com/api/api/sent-prompts/\<id>
+
+***
 
 ### Opportunities
 
