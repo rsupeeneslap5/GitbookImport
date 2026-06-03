@@ -74,11 +74,15 @@ This UI component includes 4 tabs, which can be [configured to show/hide, sequen
 
 ### Custom Objects
 
-The SlapFive Salesforce App installs three custom objects:
+The SlapFive Salesforce App installs these custom objects:
 
 1. SlapFive Customer Influence
 2. SlapFive Customer Influence Activity
 3. SlapFive Customer Activity
+4. SlapFive Company
+5. SlapFive Contact
+6. SlapFive Board
+7. SlapFive Story
 
 The **SlapFive Customer Influence** custom object has a Master-Detail relationship with the Opportunity object. An Opportunity record can have zero to many SlapFive Customer Influence records.
 
@@ -89,6 +93,8 @@ These two objects together are used to [capture revenue influence events](./#tra
 <table><thead><tr><th width="203">Influence Event</th><th width="246">SlapFive Customer Influence</th><th width="317">SlapFive Customer Influence Activity</th></tr></thead><tbody><tr><td>Reference Request</td><td>The request header: The Need, Need by Date, Activity, Request Date, etc.</td><td>The Request Fulfillment Companies &#x26; Members who have been selected to fulfill the Request.</td></tr><tr><td>Content Share &#x26; View</td><td>The share details: Content shared, Contact shared with, Share Date, etc.</td><td>The views of the shared content: View Date, View Details Link.</td></tr><tr><td>Customer Referral</td><td>The referral details: Referred Prospect, Referred By Customer, Referral Date, etc.</td><td>The Referral Score.</td></tr></tbody></table>
 
 The **SlapFive Customer Activity** custom object is used to pull in all the different kinds of Customer Activities that are captured in SlapFive so that you can include this type of customer engagement in your influence reporting, and show the activities that customers are doing on the Account and Contact screens.
+
+The **SlapFive Company, SlapFive Contact, SlapFive Board, and SlapFive Story** custom objects are used to sync SlapFive reference and content data with Salesforce to display in the custom UI component.
 
 ### Custom Fields
 

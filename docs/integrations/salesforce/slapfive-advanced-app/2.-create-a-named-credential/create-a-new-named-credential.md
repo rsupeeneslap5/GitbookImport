@@ -78,7 +78,7 @@ Use the following values:
 * **External Credential:** SlapFive External API
 * **Generate Authorization Header:** Checked
 * **Allow Formulas in HTTP Header:** Checked
-* **Allowed Namespaces for Callouts:** SlapFiveInc
+* **Allowed Namespaces for Callouts:** slap5
 
 Save the record.
 
