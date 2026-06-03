@@ -136,6 +136,7 @@
     * [Set up Microsoft Forms automation](integrations/microsoft/forms/set-up-microsoft-forms-automation.md)
   * [Outlook (Microsoft 365)](integrations/microsoft/outlook-microsoft-365/README.md)
     * [Connect to Outlook](integrations/microsoft/outlook-microsoft-365/connect-to-outlook.md)
+    * [Connect to Outlook with Client Credentials-based auth](integrations/microsoft/outlook-microsoft-365/connect-to-outlook-with-client-credentials-based-auth.md)
   * [Sharepoint](integrations/microsoft/sharepoint/README.md)
     * [Connect to Sharepoint](integrations/microsoft/sharepoint/connect-to-sharepoint.md)
 * [Reachdesk](integrations/reachdesk/README.md)
