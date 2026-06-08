@@ -433,6 +433,10 @@ Logic for associating Member with Company:
 &#x20;    }\
 }
 
+#### Create or update Members in Bulk
+
+Use the same input fields and rules, but pass multiple objects within an array. The maximum body array size is 1000.
+
 #### Delete Member
 
 Delete a Member record by id.
@@ -551,6 +555,10 @@ Required for updating the Company's salesforceAccountId: id, new salesforceAccou
 &#x20;    }\
 }
 
+#### Create or update Companies in Bulk
+
+Use the same input fields and rules, but pass multiple objects within an array. The maximum body array size is 1000.
+
 #### Delete Company
 
 Delete a Company record by id.
@@ -634,6 +642,10 @@ Required for updating Activity: id
 "status": "ok",\
 "message": “added activity type ‘Speak at a conference’ to John Smith”\
 }
+
+#### Create or update Activities in Bulk
+
+Use the same input fields and rules, but pass multiple objects within an array. The maximum body array size is 1000.
 
 #### Delete Activity
 
