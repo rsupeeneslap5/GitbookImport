@@ -142,7 +142,7 @@ Verify the policy:
 Get-ApplicationAccessPolicy | fl
 ```
 
-Wait at least 30 minutes after creating or modifying the Application Access Policy before creating the Outlook Connection in Step 7, to allow time for Exchange to propogate the changes.
+Wait at least 30 minutes after creating or modifying the Application Access Policy before creating the Outlook Connection in Step 8, to allow time for Exchange to propogate the changes.
 
 ***
 
