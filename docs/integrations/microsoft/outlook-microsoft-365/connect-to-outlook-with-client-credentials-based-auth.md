@@ -119,9 +119,17 @@ Examples:
 
 The mailbox specified here must also be a member of the **mail-enabled security group** configured in Step 7.
 
-Go to **Microsoft Entra ID >** **Users** and search for the mailbox you want the connection to send from (i.e. `references@company.com`).
+For user mailboxes, go to **Microsoft Entra ID > Users**, search for the mailbox you want the connection to send from, and copy the **User Principal Name**. This will usually be the same as the email address.
 
-Copy the **User Principal Name** (which will usually be the same as the mailbox’s email address). You’ll enter this value later in SlapFive as the **User ID** or **Default user**.
+For shared mailboxes, or if you're unsure of the primary SMTP address, run the following command in Exchange Online PowerShell:
+
+```powershell
+powershell
+
+Get-Mailbox <address> | Format-List PrimarySmtpAddress
+```
+
+Use the value returned as the User ID. You'll enter this value later in SlapFive as the **User ID** or **Default user**.
 
 ***
 
@@ -200,6 +208,10 @@ Repeat this step for each standard mailbox you’ll use (i.e.  `advocacy@company
 
 ### Troubleshooting the Outlook Connection
 
+**Error: `Test-ServicePrincipalAuthorization` still retuns InScope=False after 60 minutes**
+
+If `Test-ServicePrincipalAuthorization` still returns `InScope = False` after 60 minutes, confirm that the Management Scope filter is using the group's distinguished name (DN) rather than its email address, and that the target mailbox is a direct member of the group rather than a nested member.
+
 **Error: `New-ServicePrincipal` fails in Step 7**
 
 The Service Principal may already exist in Exchange Online if the app was previously registered. Try running `Get-ServicePrincipal -AppId <CLIENT_ID>` first. If it returns a result, skip the `New-ServicePrincipal` command and proceed.
@@ -216,7 +228,7 @@ Get-Group "SlapFive Email Senders" | Format-List DistinguishedName
 
 Then use the DN value in the filter instead of the email address.
 
-**Error: Connection succees but 403 Forbidden error received when sending email**
+**Error: Connection succeeds but 403 Forbidden error received when sending email**
 
 If the Outlook connection succeeds but sending email fails with a 403 error, check the following:
 
