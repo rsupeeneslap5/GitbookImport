@@ -35,7 +35,7 @@ Open the new app and go to **Manage > API permissions.** Select **+ Add a permis
 
 1. **What type of permissions does your app require?** choose **Application permissions.**\
    &#xNAN;_(This is required for Client Credentials–based authentication.)_
-2. **Select permissions:** the minimum permissions are `Mail.Send` and `Mail.Read` .
+2. **Select permissions:** the minimum permissions are `Mail.Send` , `Mail.Read`  and  `Mail.ReadWrite` .
 3. Click **Add permissions**.
 4. Back on the **API permissions** page, click **Grant admin consent for \<your organization name>** and confirm. This approves the permissions for all users in the tenant. If this step is skipped, non-admin users who try to create the Workato Outlook connection will see a **“Need admin approval”** message and won’t be able to proceed.
 
