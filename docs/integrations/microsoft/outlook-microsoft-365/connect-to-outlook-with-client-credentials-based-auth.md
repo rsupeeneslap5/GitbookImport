@@ -129,6 +129,7 @@ Create an **Application Access Policy** in Exchange Online that allows your app 
 
 ```
 Connect-ExchangeOnline -UserPrincipalName <admin@domain.com>
+
 New-ApplicationAccessPolicy -AppId <CLIENT_ID> `
   -PolicyScopeGroupId "SlapFive Email Senders" `
   -AccessRight RestrictAccess `
