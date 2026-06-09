@@ -53,11 +53,22 @@ Go to **Manage > Certificates & Secrets** **> Client Secrets**, and click **+ Ne
 
 ### Step 4. Obtain the Client ID, Object ID, and Tenant ID
 
-Go to **Overview > Essentials.** Copy and save these items:
+You will need to collect two different Object IDs from two different places in Entra ID — one from the App Registration and one from the Enterprise Application. These are different objects and should not be confused with each other.
 
-* [ ] **Application (client) ID**
-* [ ] **Object ID**
-* [ ] **Directory (tenant) ID**
+**From the App Registration:**
+
+Go to **Microsoft Entra ID > App registrations > SlapFive Email Automation > Overview > Essentials** and copy:
+
+* **Application (client) ID**
+* **Directory (tenant) ID**
+
+**From the Enterprise Application:**
+
+Go to **Microsoft Entra ID > Enterprise applications**, search for _SlapFive Email Automation_, and open it. From the **Overview** page, copy:
+
+* **Object ID** (this is the Enterprise Application Object ID, which is required for Step 7)
+
+Save all three values — you will need them in later steps.
 
 ***
 
