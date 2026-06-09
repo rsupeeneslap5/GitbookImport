@@ -25,11 +25,7 @@ Enter the following data and click **Register**.
 
 1. **Name:** enter _SlapFive Email Automation_.
 2. **Supported account types:** choose **Accounts in this organizational directory only (Single tenant)**.
-3.  **Redirect URI**: select **Web** from the platform dropdown and enter:
-
-    ```
-    https://www.workato.com/oauth/callback
-    ```
+3. **Redirect URI**: leave blank and don't select a Platform.
 
 ***
 
