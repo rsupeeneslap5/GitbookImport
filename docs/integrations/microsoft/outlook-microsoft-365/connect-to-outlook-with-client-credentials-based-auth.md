@@ -165,7 +165,6 @@ Repeat this step for each standard mailbox you’ll use (i.e.  `advocacy@company
 
 If the Outlook connection succeeds but sending email fails with a 403 error, check the following:
 
-* The Microsoft Graph API Permissions DO NOT include `offline_access`
 * The sender email address exists as a mailbox in Exchange Online
 * The mailbox is included in the Application Access Policy group
 * The policy has had at least 30 minutes to propagate
