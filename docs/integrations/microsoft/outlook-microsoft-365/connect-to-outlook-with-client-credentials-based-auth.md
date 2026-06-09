@@ -35,7 +35,7 @@ Open the new app and go to **Manage > API permissions.** Select **+ Add a permis
 
 1. **What type of permissions does your app require?** choose **Application permissions.**\
    &#xNAN;_(This is required for Client Credentials–based authentication.)_
-2. **Select permissions:** the minimum permissions are `Mail.Send` , `Mail.Read`  and  `Mail.ReadWrite` .
+2. **Select permissions:** the minimum permissions are `Mail.Send`  and  `Mail.ReadWrite` .
 3. Click **Add permissions**.
 4. Back on the **API permissions** page, click **Grant admin consent for \<your organization name>** and confirm. This approves the permissions for all users in the tenant. If this step is skipped, non-admin users who try to create the Workato Outlook connection will see a **“Need admin approval”** message and won’t be able to proceed.
 
@@ -117,7 +117,7 @@ Examples:
 * ❌ Mail contacts
 * ❌ Aliases that are not the primary SMTP address
 
-The mailbox specified here must also be included in the Exchange **Application Access Policy** configured in Step 7.
+The mailbox specified here must also be a member of the **mail-enabled security group** configured in Step 7.
 
 Go to **Microsoft Entra ID >** **Users** and search for the mailbox you want the connection to send from (i.e. `references@company.com`).
 
@@ -200,11 +200,35 @@ Repeat this step for each standard mailbox you’ll use (i.e.  `advocacy@company
 
 ### Troubleshooting the Outlook Connection
 
-**Error: 403 Forbidden when sending email**
+**Error: `New-ServicePrincipal` fails in Step 7**
+
+The Service Principal may already exist in Exchange Online if the app was previously registered. Try running `Get-ServicePrincipal -AppId <CLIENT_ID>` first. If it returns a result, skip the `New-ServicePrincipal` command and proceed.
+
+**Error: `New-ManagementScope` fails with a filter error**
+
+The `MemberOfGroup` filter requires the group's distinguished name (DN), not always its email address. If the command fails, retrieve the DN first with:
+
+```powershell
+powershell
+
+Get-Group "SlapFive Email Senders" | Format-List DistinguishedName
+```
+
+Then use the DN value in the filter instead of the email address.
+
+**Error: Connection succees but 403 Forbidden error received when sending email**
 
 If the Outlook connection succeeds but sending email fails with a 403 error, check the following:
 
 * The sender email address exists as a mailbox in Exchange Online
-* The mailbox is included in the Application Access Policy group
-* The policy has had at least 30 minutes to propagate
+* The mailbox is a member of the SlapFive Email Senders security group configured in Step 7
+* The policy has had at least 60 minutes to propagate
 * The User ID exactly matches the mailbox’s primary SMTP address
+
+**Connection succeeds but emails arrive from the wrong address**
+
+If email is sent from a different address than expected, the User ID entered in Step 8 may not exactly match the mailbox's primary SMTP address. Verify by running `Get-Mailbox <address> | Format-List PrimarySmtpAddress` and confirm it matches what was entered as the User ID.
+
+**Client secret expiry**
+
+If the connection stops working after 12 months, the client secret has likely expired. Return to Step 3, create a new secret, and update the Client secret value in the SlapFive Outlook Connection settings.
