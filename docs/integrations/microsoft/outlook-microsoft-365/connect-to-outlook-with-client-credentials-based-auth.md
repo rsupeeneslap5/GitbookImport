@@ -114,31 +114,63 @@ Copy the **User Principal Name** (which will usually be the same as the mailboxâ
 
 ***
 
-### Step 7. Authorize the App to send from mailboxes
+### Step 7. Authorize the App to Send from Mailboxes
 
-Create an **Application Access Policy** in Exchange Online that allows your app to send mail from specific mailboxes (shared or regular).
+Grant the app permission to send from specific mailboxes using Exchange Online's Role Based Access Control (RBAC) for Applications.
 
-1. Create a mail-enabled security group.&#x20;
-   1. Name it something like _SlapFive Email Senders_.
-   2. Add every mailbox (`references@company.com`, `advocacy@company.com`, etc.) that the app should be allowed to send from.
-2. Run these PowerShell commands:
+**Create a mail-enabled security group.**
 
-```
+Name it something like _SlapFive Email Senders_ and add every mailbox the app should be allowed to send from (e.g. [references@company.com](mailto:references@company.com), [advocacy@company.com](mailto:advocacy@company.com)).
+
+**Register the app as a Service Principal in Exchange Online.**
+
+Run the following PowerShell commands, using the Application (client) ID and Enterprise Application Object ID from Step 4:
+
+```powershell
+powershell
+
 Connect-ExchangeOnline -UserPrincipalName <admin@domain.com>
 
-New-ApplicationAccessPolicy -AppId <CLIENT_ID> `
-  -PolicyScopeGroupId "SlapFive Email Senders" `
-  -AccessRight RestrictAccess `
-  -Description "Allow SlapFive Email Automation to send as approved mailboxes"
+New-ServicePrincipal `
+    -AppId <CLIENT_ID> `
+    -ObjectId <ENTERPRISE_APP_OBJECT_ID>
 ```
 
-Verify the policy:
+**Create a Management Scope for the security group.**
 
-```
-Get-ApplicationAccessPolicy | fl
+```powershell
+powershell
+
+New-ManagementScope `
+    -Name "SlapFive Email Senders Scope" `
+    -RecipientRestrictionFilter "MemberOfGroup -eq '<group email address>'"
 ```
 
-Wait at least 30 minutes after creating or modifying the Application Access Policy before creating the Outlook Connection in Step 8, to allow time for Exchange to propogate the changes.
+**Assign the Mail.Send role to the app.**
+
+```powershell
+powershell
+
+New-ManagementRoleAssignment `
+    -Name "SlapFive Mail.Send" `
+    -Role "Application Mail.Send" `
+    -App <CLIENT_ID> `
+    -CustomResourceScope "SlapFive Email Senders Scope"
+```
+
+**Verify the assignment.**
+
+```powershell
+powershell
+
+Test-ServicePrincipalAuthorization `
+    -Identity <CLIENT_ID> `
+    -Resource references@company.com
+```
+
+The result should show `InScope = True` for the mailbox. If it returns `False`, confirm the mailbox is a member of the security group and wait a few minutes for changes to propagate.
+
+Wait at least 60 minutes after completing this step before creating the Outlook Connection in Step 8, to allow Exchange time to propagate the changes.
 
 ***
 
