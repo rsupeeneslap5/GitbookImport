@@ -13,7 +13,7 @@ hidden: true
 1. Microsoft 365 tenant (Exchange Online)
 2. Admin access to **Microsoft Entra ID** (formerly Azure AD)
 3. Admin access to **Exchange Admin Center** or PowerShell
-4. Access to your company’s **Workato workspace**
+4. Access to your **SlapFive Client Settings**
 
 ***
 
