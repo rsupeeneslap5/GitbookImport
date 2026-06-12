@@ -168,8 +168,16 @@ storyIds: passing storyIds will remove all currently attached Stories from the B
 
 Delete a Board record by id.
 
-Method: DELETE\
-URL: https://your\_company.slapfive.com/api/api/boards/\<id>
+Method: POST\
+URL: https://your\_company.slapfive.com/api/api/boards/delete
+
+**Sample JSON request data:**
+
+```postman_json
+{
+  "ids": ["cmoc5omsq6vf345rq1nt4bepe", "cmoc635xn6s600mvag0ehajlp"]
+} 
+```
 
 ***
 
@@ -281,8 +289,16 @@ Required for creating a new Story: \
 
 Delete a Story record by id.
 
-Method: DELETE\
-URL: https://your\_company.slapfive.com/api/api/stories/\<id>
+Method: POST\
+URL: https://your\_company.slapfive.com/api/api/stories/delete
+
+**Sample JSON request data:**
+
+```postman_json
+{
+  "ids": ["cmoc5omsq6vf345rq1nt4bepe", "cmoc635xn6s600mvag0ehajlp"]
+} 
+```
 
 ***
 
@@ -441,8 +457,16 @@ Use the same input fields and rules, but pass multiple objects within an array. 
 
 Delete a Member record by id.
 
-Method: DELETE\
-URL: https://your\_company.slapfive.com/api/api/customers/\<id>
+Method: POST\
+URL: https://your\_company.slapfive.com/api/api/customers/delete
+
+**Sample JSON request data:**
+
+```postman_json
+{
+  "ids": ["cmoc5omsq6vf345rq1nt4bepe", "cmoc635xn6s600mvag0ehajlp"]
+} 
+```
 
 ***
 
@@ -563,8 +587,16 @@ Use the same input fields and rules, but pass multiple objects within an array. 
 
 Delete a Company record by id.
 
-Method: DELETE\
-URL: https://your\_company.slapfive.com/api/api/companies/\<id>
+Method: POST\
+URL: https://your\_company.slapfive.com/api/api/companies/delete
+
+**Sample JSON request data:**
+
+```postman_json
+{
+  "ids": ["cmoc5omsq6vf345rq1nt4bepe", "cmoc635xn6s600mvag0ehajlp"]
+} 
+```
 
 ***
 
@@ -651,8 +683,16 @@ Use the same input fields and rules, but pass multiple objects within an array. 
 
 Delete an Activity record by id.
 
-Method: DELETE\
-URL: https://your\_company.slapfive.com/api/api/activity/\<id>
+Method: POST\
+URL: https://your\_company.slapfive.com/api/api/activity/delete
+
+**Sample JSON request data:**
+
+```postman_json
+{
+  "ids": ["cmoc5omsq6vf345rq1nt4bepe", "cmoc635xn6s600mvag0ehajlp"]
+} 
+```
 
 ***
 
@@ -745,8 +785,16 @@ Required: needDescription, needByDate\
 
 Delete a Request record by id.
 
-Method: DELETE\
-URL: https://your\_company.slapfive.com/api/api/requests/\<id>
+Method: POST\
+URL: https://your\_company.slapfive.com/api/api/requests/delete
+
+**Sample JSON request data:**
+
+```postman_json
+{
+  "ids": ["cmoc5omsq6vf345rq1nt4bepe", "cmoc635xn6s600mvag0ehajlp"]
+} 
+```
 
 ***
 
@@ -1015,8 +1063,16 @@ body: {\
 
 Delete a Content Share record by id.
 
-Method: DELETE\
-URL: https://your\_company.slapfive.com/api/api/shares/\<id>
+Method: POST\
+URL: https://your\_company.slapfive.com/api/api/shares/delete
+
+**Sample JSON request data:**
+
+```postman_json
+{
+  "ids": ["cmoc5omsq6vf345rq1nt4bepe", "cmoc635xn6s600mvag0ehajlp"]
+} 
+```
 
 ***
 
@@ -1057,8 +1113,16 @@ body: {\
 
 Delete a Content View record by id.
 
-Method: DELETE\
-URL: https://your\_company.slapfive.com/api/api/pageViews/\<id>
+Method: POST\
+URL: https://your\_company.slapfive.com/api/api/pageViews/delete
+
+**Sample JSON request data:**
+
+```postman_json
+{
+  "ids": ["cmoc5omsq6vf345rq1nt4bepe", "cmoc635xn6s600mvag0ehajlp"]
+} 
+```
 
 ***
 
@@ -1100,8 +1164,16 @@ Optional parameters: customGreeting, customSubject
 
 Delete a Prompt record by id.
 
-Method: DELETE\
-URL: https://your\_company.slapfive.com/api/api/prompts/\<id>
+Method: POST\
+URL: https://your\_company.slapfive.com/api/api/prompts/delete
+
+**Sample JSON request data:**
+
+```postman_json
+{
+  "ids": ["cmoc5omsq6vf345rq1nt4bepe", "cmoc635xn6s600mvag0ehajlp"]
+} 
+```
 
 #### Webhook for new Prompt Response
 
