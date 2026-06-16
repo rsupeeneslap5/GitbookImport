@@ -86,8 +86,13 @@ Save the record.
 
 #### Step 5: Grant Access to the External Credential Principal
 
-Users running SlapFive automations must be granted access to the External Credential Principal.
+Users who need access to the SlapFive App must be granted access to the External Credential Principal. This must be added to every Permission Set that will be assigned to end users, including any cloned copies of the SlapFive managed Permission Set — clones do not inherit External Credential Principal Access automatically.
 
-1. Open the target **Profile** or **Permission Set**
-2. Find **Enabled External Credential Principal Access**
-3. Add the Principal created in Step 2.
+1. In Salesforce Setup, navigate to **Permission Sets**
+2. Open the Permission Set assigned to your end users (e.g. your cloned SlapFive Permission Set)
+3. Click **External Credential Principal Access**
+4. Click **Edit** and move **SlapFive External API - SlapFive API Key** to the Enabled list
+5. Save
+6. Repeat for any additional Permission Sets whose users need SlapFive access
+
+> ⚠️ **Note:** If end users see the error _"Error retrieving client data: You don't have read permissions on the User external credential object"_, the most likely cause is that this step was not completed for their Permission Set.
