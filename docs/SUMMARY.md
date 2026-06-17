@@ -131,6 +131,7 @@
   * [Connect to Influitive](integrations/influitive/connect-to-influitive.md)
 * [Marketo](integrations/marketo/README.md)
   * [Connect to Marketo](integrations/marketo/connect-to-marketo.md)
+  * [Send Marketo Form Data to SlapFive](integrations/marketo/send-marketo-form-data-to-slapfive.md)
 * [Microsoft](integrations/microsoft/README.md)
   * [Forms](integrations/microsoft/forms/README.md)
     * [Set up Microsoft Forms automation](integrations/microsoft/forms/set-up-microsoft-forms-automation.md)
