@@ -54,6 +54,12 @@ You can also specify the names of fields from related objects, like this example
 
 ...api/api/customers/?fields=fname,lname,title,email,company.name,company.location
 
+## Get Data with Role Filters Applied
+
+You can append GET URLs with scope=Role to filter the data returned using the Role Filters for the specified Role. For example, to filter Company data by the filter for the Company entity defined in the Salesforce Role:
+
+...api/api/companies?scope=Role:Salesforce%20Company
+
 ## Available API endpoints
 
 ***
