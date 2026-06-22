@@ -13,7 +13,7 @@ The automated workflow runs in four steps:
 
 1. **Form:** A prospect fills out a Marketo landing page form with their details.
 2. **Smart Campaign:** A Marketo Smart Campaign detects the form submission and triggers automatically.
-3. Webhook: The campaign calls a configured Webhook that POSTs the form data as JSON to SlapFive's automation server, which updates SlapFive Members, Companies, Campaigns, etc.
+3. **Webhook:** The campaign calls a configured Webhook that POSTs the form data as JSON to SlapFive's automation server, which updates SlapFive Members, Companies, Campaigns, etc.
 
 ### Step 1 — Create the Webhook
 
@@ -51,8 +51,15 @@ json
 
 **Tokens are case-sensitive.** Use the exact token names from Marketo. You can also click **Insert Token** inside the Template field to browse and pick tokens from a picker rather than typing them manually.
 
-\
 4\. Click **Save**. The webhook now appears in your Webhooks list.
+
+5\.  Reopen the webhook you just saved and click **Add Header**. Add the following header so that SlapFive's server correctly interprets the request body as JSON:
+
+| Header Name  | Header Value     |
+| ------------ | ---------------- |
+| Content-Type | application/json |
+
+6\. Click **Save** again.
 
 ***
 
