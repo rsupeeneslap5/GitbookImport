@@ -95,4 +95,17 @@ Users who need access to the SlapFive App must be granted access to the External
 5. Click the Save button
 6. Repeat for any additional Permission Sets whose users need SlapFive access
 
-> ⚠️ **Note:** If end users see the error _"Error retrieving client data: You don't have read permissions on the User external credential object"_, the most likely cause is that this step was not completed for their Permission Set.
+***
+
+### **Step 6: Verify API Access on End User Profiles**
+
+Users that belong to restricted custom Profiles must have the **API Enabled** permission active on their Profile. Without it, Salesforce will block the callouts that the SlapFive component makes, even if their Permission Set is correctly configured.
+
+1. In Salesforce Setup, navigate to **Profiles**
+2. Open the Profile assigned to your end users (e.g. Marketing User)
+3. Search for **API Enabled** in the profile settings
+4. Ensure it is checked
+5. Click **Save**
+6. Repeat for any additional Profiles whose users need SlapFive access
+
+> ⚠️ **Note:** If end users see the error _"Error retrieving client data: You don't have read permissions on the User external credential object"_, the most likely causes are that Step 5 was not completed for their Permission Set, or that Step 6 was not completed for their Profile.
