@@ -90,9 +90,9 @@ Users who need access to the SlapFive App must be granted access to the External
 
 1. In Salesforce Setup, navigate to **Permission Sets**
 2. Open the Permission Set assigned to your end users (e.g. your cloned SlapFive Permission Set)
-3. Click **Object Settings → User External Credentials,** click **Edit**, enable **Read** access and click Save.
-4. Click the **Permission Set Overview** breadcrumb to go back to the main screen for this Permission Set.
-5. Click **External Credential Principal Access,** click **Edit** and move **SlapFive External API - SlapFive API Key** to the Enabled list and click Save
+3. Click **Object Settings → User External Credentials,** click **Edit**, enable **Read** access and click **Save**.
+4. Click the **Permission Set Overview** breadcrumb to go back to the main screen for this Permission Set
+5. Click **External Credential Principal Access,** click **Edit** and move **SlapFive External API - SlapFive API Key** to the Enabled list and click **Save**
 6. Repeat for any additional Permission Sets whose users need SlapFive access
 
 ***
