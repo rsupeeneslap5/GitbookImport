@@ -98,6 +98,8 @@
   * [Connect to Airtable](integrations/airtable/connect-to-airtable.md)
 * [ChurnZero](integrations/churnzero/README.md)
   * [Connect to ChurnZero](integrations/churnzero/connect-to-churnzero.md)
+* [Claude](integrations/claude/README.md)
+  * [Connect to SlapFive from Claude Cowork](integrations/claude/connect-to-slapfive-from-claude-cowork.md)
 * [Eloqua](integrations/eloqua/README.md)
   * [Connect to Eloqua](integrations/eloqua/connect-to-eloqua.md)
   * [Customer Referrals](integrations/eloqua/customer-referrals.md)
