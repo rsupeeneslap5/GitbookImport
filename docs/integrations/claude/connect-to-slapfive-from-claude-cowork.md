@@ -18,6 +18,7 @@ SlapFive has enabled you to connect to SlapFive's MCP Server from Claude Cowork.
 3. SlapFive now appears in the Not connected list of Connectors and is selected, click the **Connect** button in the main panel.
 4. You will see the SlapFive login screen. If you are already logged into your SlapFive account, just click your Email address. If you are not already logged in, enter your Username and Password and click the login button.
 
-Once you are successfully connected, you will see SlapFive in the list of connected Connectors.
+Once you are successfully connected, you will see SlapFive in the list of connected Connectors. For security purposes, SlapFive connections are set to expire after periods of non-use, so if your login has expired, you will need to repeat steps 3 and 4.
 
-NOTE: For security purposes, SlapFive connections are set to expire after periods of non-use, so if your login has expired, you will need to repeat steps 3 and 4.
+NOTE: When executing Prompts that access SlapFive data, each time Claude Cowork uses a SlapFive AI Skill for the first time, it will ask you for permission. Just click the **Allow for this task** button or click **Enter** to proceed.
+
