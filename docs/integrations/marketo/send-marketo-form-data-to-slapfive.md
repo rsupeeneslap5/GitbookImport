@@ -23,33 +23,31 @@ The Webhook tells Marketo where to send data and what to include in the request 
 2. Click **New Webhook**. The New Webhook dialog opens.
 3. Complete each field as follows:
 
-| Field                      | Value to Enter                                                   |
-| -------------------------- | ---------------------------------------------------------------- |
-| **Webhook Name**           | _Send Form Completion to SlapFive_ (or any descriptive name)     |
-| **Description**            | Enter an optional description                                    |
-| **URL**                    | Paste the Webhook Trigger URL provided by your SlapFive CSM here |
-| **Request Type**           | POST                                                             |
-| **Template**               | See JSON body below                                              |
-| **Request Token Encoding** | UTF-8                                                            |
-| **Response Type**          | JSON                                                             |
+| Field                      | Value to Enter                                                                                                                                                                                                           |
+| -------------------------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------ |
+| **Webhook Name**           | _Send Form Completion to SlapFive_ (or any descriptive name)                                                                                                                                                             |
+| **Description**            | Enter an optional description                                                                                                                                                                                            |
+| **URL**                    | Paste the Webhook Trigger URL provided by your SlapFive CSM here                                                                                                                                                         |
+| **Request Type**           | POST                                                                                                                                                                                                                     |
+| **Template**               | Use Marketo's Insert Token function to generate the JSON body that your form will pass to SlapFive. Marketo will automatically replace each token with the lead's field value when the webhook fires. See example below. |
+| **Request Token Encoding** | UTF-8                                                                                                                                                                                                                    |
+| **Response Type**          | JSON                                                                                                                                                                                                                     |
 
-**Request Body (Template Field)**
-
-Copy and paste the following JSON, augmented with the rest of your form fields, into the **Template** field. Marketo will automatically replace each token with the lead's field value when the webhook fires.
+**Template Field: JSON Body Example**
 
 ```json
 json
 
 {
-  "firstName": "{{lead.First Name}}",
-  "lastName":  "{{lead.Last Name}}",
-  "email":     "{{lead.Email Address}}",
-  "company":   "{{lead.Company Name}}",
-  add the rest of the form fields in this format
+  "referral_first_name": "{{lead.First Name:default=edit me}}",
+  "referral_last_name": "{{lead.Last Name:default=edit me}}",
+  "referral_email": "{{lead.Email Address:default=edit me}}",
+  "referral_job_title": "{{lead.Job Title:default=edit me}}",
+  "referral_company_name": "{{company.Company Name:default=edit me}}",
+  "referrer_email": "{{lead.Temp String 5:default=edit me}}",
+  "why_referring": "{{lead.Temp Text Area 1:default=edit me}}"
 }
 ```
-
-**Tokens are case-sensitive.** Use the exact token names from Marketo. You can also click **Insert Token** inside the Template field to browse and pick tokens from a picker rather than typing them manually.
 
 4\. Click **Save**. The webhook now appears in your Webhooks list.
 
