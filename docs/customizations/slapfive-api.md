@@ -828,7 +828,7 @@ URL: https://your\_company.slapfive.com/api/api/requests/delete
 
 ***
 
-### Request Fulfillment Members/Companies
+### Fulfillment Members/Companies
 
 #### Get all Request Fulfillment Members/Companies
 
@@ -925,7 +925,7 @@ Required for updating Fulfillment Member/Company: id
 
 ***
 
-### Request Fulfillment Boards
+### Fulfillment Boards
 
 #### Get all Request Fulfillment Boards
 
