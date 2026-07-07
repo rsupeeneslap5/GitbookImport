@@ -172,7 +172,19 @@ storyIds: passing storyIds will remove all currently attached Stories from the B
 "dynamicFields": {
       "fieldName1": "value",
       "fieldName2":"value",
-      "fieldName3": [                      // PICKMANY dynamic fields
+      "fieldName3": [                      // replaces PICKMANY dynamic field values
+           "Value1",
+           "Value2"
+       ]
+    },
+"dynamicFieldsAdd": {
+      "fieldName1": [                      // adds PICKMANY dynamic field values
+           "Value1",
+           "Value2"
+       ]
+    },
+"dynamicFieldsDelete": {
+      "fieldName1": [                      // deletes PICKMANY dynamic field values
            "Value1",
            "Value2"
        ]
@@ -308,7 +320,19 @@ Required for creating a new Story: \
 "dynamicFields": {
       "fieldName1": "value",
       "fieldName2":"value",
-      "fieldName3": [                      // PICKMANY dynamic fields
+      "fieldName3": [                      // replaces PICKMANY dynamic field values
+           "Value1",
+           "Value2"
+       ]
+    },
+"dynamicFieldsAdd": {
+      "fieldName1": [                      // adds PICKMANY dynamic field values
+           "Value1",
+           "Value2"
+       ]
+    },
+"dynamicFieldsDelete": {
+      "fieldName1": [                      // deletes PICKMANY dynamic field values
            "Value1",
            "Value2"
        ]
@@ -450,7 +474,19 @@ Logic for associating Member with Company:
 "dynamicFields": {
       "fieldName1": "value",
       "fieldName2":"value",
-      "fieldName3": [                      // PICKMANY dynamic fields
+      "fieldName3": [                      // replaces PICKMANY dynamic field values
+           "Value1",
+           "Value2"
+       ]
+    },
+"dynamicFieldsAdd": {
+      "fieldName1": [                      // adds PICKMANY dynamic field values
+           "Value1",
+           "Value2"
+       ]
+    },
+"dynamicFieldsDelete": {
+      "fieldName1": [                      // deletes PICKMANY dynamic field values
            "Value1",
            "Value2"
        ]
@@ -625,7 +661,19 @@ Required for updating the Company's salesforceAccountId: id, new salesforceAccou
 "dynamicFields": {
       "fieldName1": "value",
       "fieldName2":"value",
-      "fieldName3": [                      // PICKMANY dynamic fields
+      "fieldName3": [                      // replaces PICKMANY dynamic field values
+           "Value1",
+           "Value2"
+       ]
+    },
+"dynamicFieldsAdd": {
+      "fieldName1": [                      // adds PICKMANY dynamic field values
+           "Value1",
+           "Value2"
+       ]
+    },
+"dynamicFieldsDelete": {
+      "fieldName1": [                      // deletes PICKMANY dynamic field values
            "Value1",
            "Value2"
        ]
@@ -740,7 +788,19 @@ Required for updating Activity: id
 "dynamicFields": {
       "fieldName1": "value",
       "fieldName2":"value",
-      "fieldName3": [                      // PICKMANY dynamic fields
+      "fieldName3": [                      // replaces PICKMANY dynamic field values
+           "Value1",
+           "Value2"
+       ]
+    },
+"dynamicFieldsAdd": {
+      "fieldName1": [                      // adds PICKMANY dynamic field values
+           "Value1",
+           "Value2"
+       ]
+    },
+"dynamicFieldsDelete": {
+      "fieldName1": [                      // deletes PICKMANY dynamic field values
            "Value1",
            "Value2"
        ]
@@ -845,7 +905,19 @@ Required: needDescription, needByDate\
 "dynamicFields": {
       "fieldName1": "value",
       "fieldName2":"value",
-      "fieldName3": [                      // PICKMANY dynamic fields
+      "fieldName3": [                      // replaces PICKMANY dynamic field values
+           "Value1",
+           "Value2"
+       ]
+    },
+"dynamicFieldsAdd": {
+      "fieldName1": [                      // adds PICKMANY dynamic field values
+           "Value1",
+           "Value2"
+       ]
+    },
+"dynamicFieldsDelete": {
+      "fieldName1": [                      // deletes PICKMANY dynamic field values
            "Value1",
            "Value2"
        ]
@@ -977,7 +1049,19 @@ Required for updating Fulfillment Member/Company: id
 "dynamicFields": {
       "fieldName1": "value",
       "fieldName2":"value",
-      "fieldName3": [                      // PICKMANY dynamic fields
+      "fieldName3": [                      // replaces PICKMANY dynamic field values
+           "Value1",
+           "Value2"
+       ]
+    },
+"dynamicFieldsAdd": {
+      "fieldName1": [                      // adds PICKMANY dynamic field values
+           "Value1",
+           "Value2"
+       ]
+    },
+"dynamicFieldsDelete": {
+      "fieldName1": [                      // deletes PICKMANY dynamic field values
            "Value1",
            "Value2"
        ]
@@ -1114,7 +1198,7 @@ body:&#x20;
 
 ```
 {
-'webhook_url': the URL that the webhook calls when a Request is created/updated
+'webhook_url': the URL that the webhook calls when a Campaign Item is created/updated
 'webhook_id': 'campaignItem'
 }
 ```
@@ -1179,7 +1263,7 @@ body:&#x20;
 
 ```
 {
-'webhook_url': the URL that the webhook calls when a Request is created/updated
+'webhook_url': the URL that the webhook calls when content is shared
 'webhook_id': 'share'
 }
 ```
@@ -1272,7 +1356,7 @@ URL: https://your\_company.slapfive.com/api/api/pageViews/delete
 
 ***
 
-### Surveys
+### Surveys & Prompts
 
 #### Get a Survey and its Responses by ID
 
@@ -1283,10 +1367,6 @@ URL: https://your\_company.slapfive.com/api/api/sentSurvey/\<id>
 
 Method: GET\
 URL: https://your\_company.slapfive.com/api/api/sentSurvey/\<id>/responses
-
-***
-
-### Prompts
 
 #### Get all Prompts
 
@@ -1321,7 +1401,7 @@ URL: https://your\_company.slapfive.com/api/api/prompts/delete
 } 
 ```
 
-#### Webhook for new Prompt Response
+#### Webhook for Survey/Prompt Sent/Responded to
 
 **Subscribe:**
 
@@ -1360,7 +1440,7 @@ URL: https://your\_company.slapfive.com/api/api/sent-prompts/
 Method: GET\
 URL: https://your\_company.slapfive.com/api/api/sent-prompts/\<id>
 
-#### Get a specific Sent Prompt Group and Response with each Sent Prompt and Response from the Prompt Group by ID
+#### Get a specific Sent Survey and Response with each Sent Prompt and Response from the Survey by ID
 
 \<id> = response\_group\_id
 
