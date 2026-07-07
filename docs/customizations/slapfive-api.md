@@ -119,56 +119,60 @@ storyIds: passing storyIds will remove all currently attached Stories from the B
 \
 **Sample JSON request data:**
 
-{\
-"id":"cjy4vfgam01eq8357x44uihd3",\
-"name":"Customer Success Story for IGM",\
-"templateId":"cjy4vfgam01eo0197xg4uihd3",\
-"headline":"IGM transforms its customer experience with help from Sandbox",\
-"tagline":"Success Story",\
-"body":"This is a sentence or two of text.",\
-"boardImageUrl":"https://www.anyimageurl.com",\
-"customUrl":"https://sandbox.slapfive.com/b/435gdfw34/IGM",\
-"ctaHead":"See Sandbox in Action",\
-"ctaCopy":"This is a sentence or two of text.",\
-"ctaLink":"https://sandbox.com/demo",\
-"ctaLinkText":"Sign up for a demo",\
-"ctaImageUrl":"https://www.anyimageurl.com",\
-"tags":"Large, Medium",\
-"activityTypeOnView\_id":"cjy4vfgam01eq8357xg4uihd3",\
-"howToUse":"This is a sentence or two of text.",\
-"useAtStages":"Qualification",\
-"tokenAccessOnly":"true",\
-"tokenAccessForcedExpirationDays":"2",\
-"usePreMessage":"true",\
-"preMessageText":"This is a sentence or two of text.",\
-"preMessageButtonText":"Agree",\
-"usePreMessageReceipt":"true",\
-"dynamicFields": {\
-&#x20;     "fieldName1": "value",\
-&#x20;     "fieldName2":"value",\
-&#x20;     "fieldName3": \[                      // PICKMANY dynamic fields\
-&#x20;          "Value1",\
-&#x20;          "Value2"\
-&#x20;      ]\
-&#x20;   },\
-"customFieldData": \[\
-&#x20;  "showInSalesforce":"Yes",\
-&#x20;  "showInHighSpot":"No"\
-&#x20;  ],\
-"storyIds": \[\
-&#x20;  "cmjbkaj2x1acw0own4vcoctig",\
-&#x20;  "cmj8fbziv09yo0ps66kmzcnbf",\
-&#x20;  "cmj8f829u09vj0ospaq0tfasm"\
-&#x20;  ]\
+```
+{
+"id":"cjy4vfgam01eq8357x44uihd3",
+"name":"Customer Success Story for IGM",
+"templateId":"cjy4vfgam01eo0197xg4uihd3",
+"headline":"IGM transforms its customer experience with help from Sandbox",
+"tagline":"Success Story",
+"body":"This is a sentence or two of text.",
+"boardImageUrl":"https://www.anyimageurl.com",
+"customUrl":"https://sandbox.slapfive.com/b/435gdfw34/IGM",
+"ctaHead":"See Sandbox in Action",
+"ctaCopy":"This is a sentence or two of text.",
+"ctaLink":"https://sandbox.com/demo",
+"ctaLinkText":"Sign up for a demo",
+"ctaImageUrl":"https://www.anyimageurl.com",
+"tags":"Large, Medium",
+"activityTypeOnView_id":"cjy4vfgam01eq8357xg4uihd3",
+"howToUse":"This is a sentence or two of text.",
+"useAtStages":"Qualification",
+"tokenAccessOnly":"true",
+"tokenAccessForcedExpirationDays":"2",
+"usePreMessage":"true",
+"preMessageText":"This is a sentence or two of text.",
+"preMessageButtonText":"Agree",
+"usePreMessageReceipt":"true",
+"dynamicFields": {
+      "fieldName1": "value",
+      "fieldName2":"value",
+      "fieldName3": [                      // PICKMANY dynamic fields
+           "Value1",
+           "Value2"
+       ]
+    },
+"customFieldData": [
+   "showInSalesforce":"Yes",
+   "showInHighSpot":"No"
+   ],
+"storyIds": [
+   "cmjbkaj2x1acw0own4vcoctig",
+   "cmj8fbziv09yo0ps66kmzcnbf",
+   "cmj8f829u09vj0ospaq0tfasm"
+   ]
 }
+```
 
 **Sample JSON output:**
 
-{\
-"board": {\
-&#x20;    "id": "cjy4vfgam01eo0197xg4uihd3"\
-&#x20;    }\
+```
+{
+"board": {
+     "id": "cjy4vfgam01eo0197xg4uihd3"
+     }
 }
+```
 
 #### Delete Board
 
@@ -246,50 +250,54 @@ Required for creating a new Story: \
 \
 **Sample JSON request data:**
 
-{\
-"id":"cjy4vfgam01eq8357xg44ihd3",\
-"customerId":"cjy4vfgam01eo0197xg4uihd3",\
-"customerEmail":"customer@company.com",\
-"promptId":"cjy4vfgam01eo0197xg4uihd3",\
-"type":"Video",\
-"url":"https://sandbox.com/asdfsadf",\
-"label":"What is your favorite thing about Sandbox?",\
-"text":"See Sandbox in Action",\
-"summary":"This is sentences of text.",\
-"transcript":"This is sentences of text.",\
-"permission":"",\
-"reviewStatus":"Released",\
-"source":"Customer inteview",\
-"sourceUrl":"",\
-"tags":"Qualification",\
-"language":"true",\
-"capturedByUserId":"cjy4vfgam01eo0197xg4uihd3",\
-"capturedByUserEmail":"user@company.com",\
-"capturedDate":"2021-10-24",\
-"nextReviewDate":"2027-06-12 12:00:00",\
-"dynamicFields": {\
-&#x20;     "fieldName1": "value",\
-&#x20;     "fieldName2":"value",\
-&#x20;     "fieldName3": \[                      // PICKMANY dynamic fields\
-&#x20;          "Value1",\
-&#x20;          "Value2"\
-&#x20;      ]\
-&#x20;   },\
-"media": {\
-&#x20;   "url": "https://mediaFileUrl",\
-&#x20;   "label": "Media label",\
-&#x20;   "transcription": "Transcription text",\
-&#x20;   "companyAttachment\_id": "cmhdx4r1d00th0os6coae28i5"\
-&#x20;   }\
+```
+{
+"id":"cjy4vfgam01eq8357xg44ihd3",
+"customerId":"cjy4vfgam01eo0197xg4uihd3",
+"customerEmail":"customer@company.com",
+"promptId":"cjy4vfgam01eo0197xg4uihd3",
+"type":"Video",
+"url":"https://sandbox.com/asdfsadf",
+"label":"What is your favorite thing about Sandbox?",
+"text":"See Sandbox in Action",
+"summary":"This is sentences of text.",
+"transcript":"This is sentences of text.",
+"permission":"",
+"reviewStatus":"Released",
+"source":"Customer inteview",
+"sourceUrl":"",
+"tags":"Qualification",
+"language":"true",
+"capturedByUserId":"cjy4vfgam01eo0197xg4uihd3",
+"capturedByUserEmail":"user@company.com",
+"capturedDate":"2021-10-24",
+"nextReviewDate":"2027-06-12 12:00:00",
+"dynamicFields": {
+      "fieldName1": "value",
+      "fieldName2":"value",
+      "fieldName3": [                      // PICKMANY dynamic fields
+           "Value1",
+           "Value2"
+       ]
+    },
+"media": {
+    "url": "https://mediaFileUrl",
+    "label": "Media label",
+    "transcription": "Transcription text",
+    "companyAttachment_id": "cmhdx4r1d00th0os6coae28i5"
+    }
 }
+```
 
 **Sample JSON output:**
 
-{\
-"story": {\
-&#x20;    "id": "cjy4vfgam01eo0197xg4uihd3"\
-&#x20;    }\
+```
+{
+"story": {
+     "id": "cjy4vfgam01eo0197xg4uihd3"
+     }
 }
+```
 
 #### Delete Story
 
@@ -369,91 +377,95 @@ Logic for associating Member with Company:
 
 **Sample JSON request data:**
 
-{\
-"id":"cmhdx4r1w00ti0os6hqs486wv",\
-"email":"jsmith@abcindustries.com",\
-"fname":"Joseph",\
-"lname":"Smith",\
-"companyName":"ABC Industries",\
-"phone":"616.765.6787",\
-"phoneCountryCode":"US",\
-"title":"VP of Marketing",\
-"functionalRole":"Marketing",\
-"avatarImageUrl":"https://www.anyimageurl.com",\
-"activityTypesWillingToDo": \[\
-&#x20;     "Speak with an industry analyst", "Take a Reference call", "Network with peers"\
-&#x20;  ]\
-"activityTypesWillingToDoWithLimits": \[\
-&#x20;     {"name": "Take a Reference Call", "limit": 3},\
-&#x20;     {"name": "Case Study", "limit": 1}\
-&#x20;  ],\
-"linkedInUrl":"https://www.linkedin.com/in/josephsmith/",\
-"twitterHandle":"@joejoesmitty",\
-"salesforceContactId":"4GH876JhG9765763",\
-"type":"Client",\
-"trustedContacts":"joesmith@abc.com, bettyjones@xyz.com",\
-"activeStatus":"Active",\
-"inviteStatus":"Member",\
-"engagementNote":"This text is added to the bottom of the Engagement Note field",\
-"engagementNoteReplace":"This text replaces what is in the engagementNote field.",\
-"nominatedBy":"Fred Johnson",\
-"nominatedDate":"",\
-"dynamicFields": {\
-&#x20;     "fieldName1": "value",\
-&#x20;     "fieldName2":"value",\
-&#x20;     "fieldName3": \[                      // PICKMANY dynamic fields\
-&#x20;          "Value1",\
-&#x20;          "Value2"\
-&#x20;      ]\
-&#x20;   },\
-"attachments": \[\
-&#x20;   { \
-&#x20;      "url": "https://mysite.com/filename.pdf",\
-&#x20;      "label": "Agreement"\
-&#x20;   }\
-&#x20; ],\
-"companyActiveStatus":"Active",\
-"companyProgramStatus":"Member",\
-"companyDescription":"Global Manufacturing company",\
-"companyLogoUrl":"https://www.anyimageurl.com",\
-"companyPermissions": \[\
-&#x20; "These are the permissions that have been explicitely granted",\
-&#x20; "Name Drop"\
-&#x20; ] \
-"companyPermissions\_denied": \[\
-&#x20; "These are the permissions that the company has explicitely denied"\
-&#x20; ] \
-"companyPermissions\_unknown": \[\
-&#x20; "These are the permissions that have not been explicitely granted or denied"\
-&#x20; ] \
-"companySize":"100-500 employees",\
-"companyIndustry":"Computer Software",\
-"companyLocation":"Boston, MA",\
-"companySince":"July 2016",\
-"companyProductsOwned":"Product A, Product B, Product C",\
-"companyCompetitorsReplaced":"Competitor X",\
-"companyBusinessGoals":"World Domination and hyper-growth",\
-"companyEngagementNotes": "This text is added to the bottom of the Engagement Notes field",\
-"companyEngagementNotesReplace": "This text replaces what is in the Engagement Notes field",\
-"companySalesforceAccountId":"4GH876JhG9765763",\
-"companyTrustedContacts":"joesmith@abc.com, bettyjones@xyz.com",\
-"companyDynamicFields": {\
-&#x20;     "fieldName1": "value",\
-&#x20;     "fieldName2":"value",\
-&#x20;     "fieldName3": \[                      // PICKMANY dynamic fields\
-&#x20;          "Value1",\
-&#x20;          "Value2"\
-&#x20;      ]\
-&#x20;   }\
+```
+{
+"id":"cmhdx4r1w00ti0os6hqs486wv",
+"email":"jsmith@abcindustries.com",
+"fname":"Joseph",
+"lname":"Smith",
+"companyName":"ABC Industries",
+"phone":"616.765.6787",
+"phoneCountryCode":"US",
+"title":"VP of Marketing",
+"functionalRole":"Marketing",
+"avatarImageUrl":"https://www.anyimageurl.com",
+"activityTypesWillingToDo": [
+      "Speak with an industry analyst", "Take a Reference call", "Network with peers"
+   ]
+"activityTypesWillingToDoWithLimits": [
+      {"name": "Take a Reference Call", "limit": 3},
+      {"name": "Case Study", "limit": 1}
+   ],
+"linkedInUrl":"https://www.linkedin.com/in/josephsmith/",
+"twitterHandle":"@joejoesmitty",
+"salesforceContactId":"4GH876JhG9765763",
+"type":"Client",
+"trustedContacts":"joesmith@abc.com, bettyjones@xyz.com",
+"activeStatus":"Active",
+"inviteStatus":"Member",
+"engagementNote":"This text is added to the bottom of the Engagement Note field",
+"engagementNoteReplace":"This text replaces what is in the engagementNote field.",
+"nominatedBy":"Fred Johnson",
+"nominatedDate":"",
+"dynamicFields": {
+      "fieldName1": "value",
+      "fieldName2":"value",
+      "fieldName3": [                      // PICKMANY dynamic fields
+           "Value1",
+           "Value2"
+       ]
+    },
+"attachments": [
+    { 
+       "url": "https://mysite.com/filename.pdf",
+       "label": "Agreement"
+    }
+  ],
+"companyActiveStatus":"Active",
+"companyProgramStatus":"Member",
+"companyDescription":"Global Manufacturing company",
+"companyLogoUrl":"https://www.anyimageurl.com",
+"companyPermissions": [
+  "These are the permissions that have been explicitely granted",
+  "Name Drop"
+  ] 
+"companyPermissions_denied": [
+  "These are the permissions that the company has explicitely denied"
+  ] 
+"companyPermissions_unknown": [
+  "These are the permissions that have not been explicitely granted or denied"
+  ] 
+"companySize":"100-500 employees",
+"companyIndustry":"Computer Software",
+"companyLocation":"Boston, MA",
+"companySince":"July 2016",
+"companyProductsOwned":"Product A, Product B, Product C",
+"companyCompetitorsReplaced":"Competitor X",
+"companyBusinessGoals":"World Domination and hyper-growth",
+"companyEngagementNotes": "This text is added to the bottom of the Engagement Notes field",
+"companyEngagementNotesReplace": "This text replaces what is in the Engagement Notes field",
+"companySalesforceAccountId":"4GH876JhG9765763",
+"companyTrustedContacts":"joesmith@abc.com, bettyjones@xyz.com",
+"companyDynamicFields": {
+      "fieldName1": "value",
+      "fieldName2":"value",
+      "fieldName3": [                      // PICKMANY dynamic fields
+           "Value1",
+           "Value2"
+       ]
+    }
 }
+```
 
 **Sample JSON output:**
 
-{\
-"customer": {\
-&#x20;    "id": "cjy4vfgam01eo0197xg4uihd3"\
-&#x20;    }\
+```
+{
+"customer": {
+     "id": "cjy4vfgam01eo0197xg4uihd3"
+     }
 }
+```
 
 #### Create or update Members in Bulk
 
@@ -528,62 +540,66 @@ Required for updating the Company's salesforceAccountId: id, new salesforceAccou
 
 **Sample JSON request data:**
 
-{\
-"id":"cmjso15j1001k0osw6jau3a4r",\
-"name": "ABC Company",\
-"description": "Large Manufacturing Company",\
-"logoUrl":"https://www.anyimageurl.com",\
-"size": "100 employees",\
-"industry": "Manufacturing",\
-"location": “Houston, TX",\
-"since": "1995",\
-"productsOwned": "Product A",\
-"competitorsReplaced": "Competitor A",\
-"businessGoals": "Make more money",\
-"salesforceAccountId": "456hg45kj64j25332",\
-"matchingField1": "Texas",\
-"matchingField2": "",\
-"matchingField3": "",\
-"engagementNotes": "This text is added to the bottom of the Engagement Notes field",\
-"engagementNotesReplace": "This text replaces whatever is in the Engagement Notes field",\
-"activeStatus": "Active",\
-"programStatus": "Member",\
-"trustedContacts": "joesmith@abc.com, bettyjones@xyz.com",\
-"anonymizedName": "",\
-"permissions": \[\
-&#x20; "These are the permissions that have been explicitely granted",\
-&#x20; "Name Drop"\
-&#x20; ] \
-"permissions\_denied": \[\
-&#x20; "These are the permissions that the company has explicitely denied"\
-&#x20; ] \
-"permissions\_unknown": \[\
-&#x20; "These are the permissions that have not been explicitely granted or denied",\
-&#x20; "Name Drop"\
-&#x20; ] \
-"dynamicFields": {\
-&#x20;     "fieldName1": "value",\
-&#x20;     "fieldName2":"value",\
-&#x20;     "fieldName3": \[                      // PICKMANY dynamic fields\
-&#x20;          "Value1",\
-&#x20;          "Value2"\
-&#x20;      ]\
-&#x20;   },\
-"attachments": \[\
-&#x20;   { \
-&#x20;      "url": "https://mysite.com/filename.pdf",\
-&#x20;      "label": "Agreement"\
-&#x20;   }\
-&#x20; ]\
+```
+{
+"id":"cmjso15j1001k0osw6jau3a4r",
+"name": "ABC Company",
+"description": "Large Manufacturing Company",
+"logoUrl":"https://www.anyimageurl.com",
+"size": "100 employees",
+"industry": "Manufacturing",
+"location": “Houston, TX",
+"since": "1995",
+"productsOwned": "Product A",
+"competitorsReplaced": "Competitor A",
+"businessGoals": "Make more money",
+"salesforceAccountId": "456hg45kj64j25332",
+"matchingField1": "Texas",
+"matchingField2": "",
+"matchingField3": "",
+"engagementNotes": "This text is added to the bottom of the Engagement Notes field",
+"engagementNotesReplace": "This text replaces whatever is in the Engagement Notes field",
+"activeStatus": "Active",
+"programStatus": "Member",
+"trustedContacts": "joesmith@abc.com, bettyjones@xyz.com",
+"anonymizedName": "",
+"permissions": [
+  "These are the permissions that have been explicitely granted",
+  "Name Drop"
+  ] 
+"permissions_denied": [
+  "These are the permissions that the company has explicitely denied"
+  ] 
+"permissions_unknown": [
+  "These are the permissions that have not been explicitely granted or denied",
+  "Name Drop"
+  ] 
+"dynamicFields": {
+      "fieldName1": "value",
+      "fieldName2":"value",
+      "fieldName3": [                      // PICKMANY dynamic fields
+           "Value1",
+           "Value2"
+       ]
+    },
+"attachments": [
+    { 
+       "url": "https://mysite.com/filename.pdf",
+       "label": "Agreement"
+    }
+  ]
 }
+```
 
 **Sample JSON output:**
 
-{\
-"company": {\
-&#x20;    "id": "cjy4vfgam01eo0197xg4uihd3"\
-&#x20;    }\
+```
+{
+"company": {
+     "id": "cjy4vfgam01eo0197xg4uihd3"
+     }
 }
+```
 
 #### Create or update Companies in Bulk
 
@@ -655,31 +671,35 @@ Required for updating Activity: id
 
 **Sample JSON request data:**
 
-{\
-"id":"sd234gsd432353f4v43534",\
-"customerId":"ckww22x5o00w70hr78mjp2i1s",\
-"email":"jsmith@abcindustries.com",\
-"activityName":"Speak at a conference",\
-"date":"2026-06-12 12:00:00",\
-"notes":"Spoke on customer panel at ABC Customer Conference",\
-"customPoints":400,\
-"points\_override\_mode":true,\
-"dynamicFields": {\
-&#x20;     "fieldName1": "value",\
-&#x20;     "fieldName2":"value",\
-&#x20;     "fieldName3": \[                      // PICKMANY dynamic fields\
-&#x20;          "Value1",\
-&#x20;          "Value2"\
-&#x20;      ]\
-&#x20;   }\
+```
+{
+"id":"sd234gsd432353f4v43534",
+"customerId":"ckww22x5o00w70hr78mjp2i1s",
+"email":"jsmith@abcindustries.com",
+"activityName":"Speak at a conference",
+"date":"2026-06-12 12:00:00",
+"notes":"Spoke on customer panel at ABC Customer Conference",
+"customPoints":400,
+"points_override_mode":true,
+"dynamicFields": {
+      "fieldName1": "value",
+      "fieldName2":"value",
+      "fieldName3": [                      // PICKMANY dynamic fields
+           "Value1",
+           "Value2"
+       ]
+    }
 }
+```
 
 **Sample JSON output:**
 
-{\
-"status": "ok",\
-"message": “added activity type ‘Speak at a conference’ to John Smith”\
+```
+{
+"status": "ok",
+"message": “added activity type ‘Speak at a conference’ to John Smith”
 }
+```
 
 #### Create or update Activities in Bulk
 
@@ -750,42 +770,46 @@ Required: needDescription, needByDate\
 \
 **Sample JSON request data:**
 
-{\
-"id": "53k3kj6322k45k3224",\
-"needDescription": "2 manufacturing customers in EMEA using product X",\
-"needFor": "Big Company sales opportunity",\
-"activityType": "Take a reference call",\
-"needByDate": "2026-04-29",\
-"requestDate": "2026-04-20",\
-"dynamicFields": {\
-&#x20;     "fieldName1": "value",\
-&#x20;     "fieldName2":"value",\
-&#x20;     "fieldName3": \[                      // PICKMANY dynamic fields\
-&#x20;          "Value1",\
-&#x20;          "Value2"\
-&#x20;      ]\
-&#x20;   },\
-"requesterEmail": "bill@slapfive.com",\
-"requesterName": "Bill Salesguy",\
-"requester\_external\_id": "48j3j3k54hj3"      // UserID from CRM\
-"team": "Sales",\
-"requestStatus": "New",\
-"fulfillmentDate": "",\
-"assignedTo": "dana@slapfive.com",\
-"note": "This is the note field.",\
-"opportunityId": "456hg45kj64j25332",\
-"preferredCustomers":"IBM, Cisco",\
-"archived":false\
+```
+{
+"id": "53k3kj6322k45k3224",
+"needDescription": "2 manufacturing customers in EMEA using product X",
+"needFor": "Big Company sales opportunity",
+"activityType": "Take a reference call",
+"needByDate": "2026-04-29",
+"requestDate": "2026-04-20",
+"dynamicFields": {
+      "fieldName1": "value",
+      "fieldName2":"value",
+      "fieldName3": [                      // PICKMANY dynamic fields
+           "Value1",
+           "Value2"
+       ]
+    },
+"requesterEmail": "bill@slapfive.com",
+"requesterName": "Bill Salesguy",
+"requester_external_id": "48j3j3k54hj3"      // UserID from CRM
+"team": "Sales",
+"requestStatus": "New",
+"fulfillmentDate": "",
+"assignedTo": "dana@slapfive.com",
+"note": "This is the note field.",
+"opportunityId": "456hg45kj64j25332",
+"preferredCustomers":"IBM, Cisco",
+"archived":false
 }
+```
 
 **Sample JSON output:**
 
-{\
-"request": {\
-&#x20;    "id": "cjy4vfggds534397xg4uihd3",\
-&#x20;    "number": "455"\
-&#x20;    }\
+```
+{
+"request": {
+     "id": "cjy4vfggds534397xg4uihd3",
+     "number": "455"
+     }
 }
+```
 
 #### Delete Request
 
@@ -861,39 +885,43 @@ Required for updating Fulfillment Member/Company: id
 
 **Sample JSON request data:**
 
-{\
-"id": "53k3kj6322k45k3224",\
-"request\_Number": "223",\
-"request\_Id": "",\
-"activityType\_name": "Take a reference call",\
-"needByDate”: "2026-04-29",\
-"customer\_id":"5jjfg834kjjsojeruweg",\
-"customer\_email": "fred@bigcompany.com",\
-"customer\_salesforceContactId": "456hg45kj64j25332",\
-"company\_id":"asdf7sd6fs6adf6asf6",\
-"company\_name": "Big Company",\
-"company\_salesforceAccountId": "456hg45kj64j25332",\
-"assignedTo\_email": "dana@slapfive.com",\
-"statusChange\_status": "Asked",\
-"statusChange\_statusChangeDate": "2026-04-29",\
-"note":"IBM, Cisco",\
-"dynamicFields": {\
-&#x20;     "fieldName1": "value",\
-&#x20;     "fieldName2":"value",\
-&#x20;     "fieldName3": \[                      // PICKMANY dynamic fields\
-&#x20;          "Value1",\
-&#x20;          "Value2"\
-&#x20;      ]\
-&#x20;   }\
+```
+{
+"id": "53k3kj6322k45k3224",
+"request_Number": "223",
+"request_Id": "",
+"activityType_name": "Take a reference call",
+"needByDate”: "2026-04-29",
+"customer_id":"5jjfg834kjjsojeruweg",
+"customer_email": "fred@bigcompany.com",
+"customer_salesforceContactId": "456hg45kj64j25332",
+"company_id":"asdf7sd6fs6adf6asf6",
+"company_name": "Big Company",
+"company_salesforceAccountId": "456hg45kj64j25332",
+"assignedTo_email": "dana@slapfive.com",
+"statusChange_status": "Asked",
+"statusChange_statusChangeDate": "2026-04-29",
+"note":"IBM, Cisco",
+"dynamicFields": {
+      "fieldName1": "value",
+      "fieldName2":"value",
+      "fieldName3": [                      // PICKMANY dynamic fields
+           "Value1",
+           "Value2"
+       ]
+    }
 }
+```
 
 **Sample JSON output:**
 
-{\
-"requestFulfillmentMember": {\
-&#x20;    "id": "cjy4vfggds534397xg4uihd3"\
-&#x20;    }\
+```
+{
+"requestFulfillmentMember": {
+     "id": "cjy4vfggds534397xg4uihd3"
+     }
 }
+```
 
 ***
 
@@ -1021,14 +1049,16 @@ Required Body Parameters: the object "entities" with name/value pairs in which t
 
 **Sample JSON request data:**
 
-{\
-&#x20;   "id": "cmklm6ojn0c5a0oqzctvu3vtg",\
-&#x20;   "entities": {\
-&#x20;     "Advocate Name": "habington@pepsico.com",\
-&#x20;     "Assigned To": "jeff@slapfive.com",\
-&#x20;     "Comments": "this is another note"\
-&#x20; }\
+```
+{
+    "id": "cmklm6ojn0c5a0oqzctvu3vtg",
+    "entities": {
+      "Advocate Name": "habington@pepsico.com",
+      "Assigned To": "jeff@slapfive.com",
+      "Comments": "this is another note"
+  }
 }
+```
 
 ***
 
@@ -1269,11 +1299,13 @@ URL: https://your\_company.slapfive.com/api/api/opportunities/\
 
 **Sample JSON output:**
 
-{\
-"opportunity": {\
-&#x20;    "id": "cjy4vfggds534397xg4uihd3"\
-&#x20;    }\
+```
+{
+"opportunity": {
+     "id": "cjy4vfggds534397xg4uihd3"
+     }
 }
+```
 
 ### Client Settings
 
@@ -1337,40 +1369,44 @@ Required: \
 \
 **Sample JSON request data:**
 
-\[\
-&#x20;  {\
-&#x20;     "id": "cmjx360k90hh60ps14ebm31fw",\
-&#x20;     "name": "Value 1",\
-&#x20;     "order": 10\
-&#x20;  },\
-&#x20;  {\
-&#x20;     "name": "Value 2",\
-&#x20;     "order": 12\
-&#x20;  }\
+```
+[
+   {
+      "id": "cmjx360k90hh60ps14ebm31fw",
+      "name": "Value 1",
+      "order": 10
+   },
+   {
+      "name": "Value 2",
+      "order": 12
+   }
 ]
+```
 
 **Sample JSON output:**
 
-\[\
-&#x20;  {\
-&#x20;     "id": "cmjx360k90hh60ps14ebm31fw",\
-&#x20;     "name": "Value 1",\
-&#x20;     "order": 10,\
-&#x20;     "dynamic\_field\_id": "cleolm2ye000d3bahwyf3klm0",\
-&#x20;     "\_\_typename": "DynamicFieldPickListValue",\
-&#x20;     "success": "inserted",\
-&#x20;     "index": 0\
-&#x20;  },\
-&#x20;  {\
-&#x20;     "id": "cmjx360k70hh50ps17f490xmw",\
-&#x20;     "name": "Value 2",\
-&#x20;     "order": 12,\
-&#x20;     "dynamic\_field\_id": "cleolm2ye000d3bahwyf3klm0",\
-&#x20;     "\_\_typename": "DynamicFieldPickListValue",\
-&#x20;     "success": "inserted",\
-&#x20;     "index": 1\
-&#x20;  }\
+```
+[
+   {
+      "id": "cmjx360k90hh60ps14ebm31fw",
+      "name": "Value 1",
+      "order": 10,
+      "dynamic_field_id": "cleolm2ye000d3bahwyf3klm0",
+      "__typename": "DynamicFieldPickListValue",
+      "success": "inserted",
+      "index": 0
+   },
+   {
+      "id": "cmjx360k70hh50ps17f490xmw",
+      "name": "Value 2",
+      "order": 12,
+      "dynamic_field_id": "cleolm2ye000d3bahwyf3klm0",
+      "__typename": "DynamicFieldPickListValue",
+      "success": "inserted",
+      "index": 1
+   }
 ]
+```
 
 ### Prompt the SlapFive AI Assistant
 
@@ -1383,15 +1419,18 @@ Required: \
 \
 **Sample JSON request data:**
 
-\
-{\
-&#x20;     "message": "Your AI Assistant Prompt",      \
+```
+{
+      "message": "Your AI Assistant Prompt",      
 }
+```
 
 \
 **Sample JSON output:**
 
-{\
-&#x20;      "text": "This is the response to the AI Assistant Prompt",\
-&#x20;      "usage": {}\
+```
+{
+       "text": "This is the response to the AI Assistant Prompt",
+       "usage": {}
 }
+```
