@@ -14,33 +14,44 @@ When making requests to any SlapFive API endpoint, you must include **api-author
 
 For using GET endpoints to retrieve more than 1,000 records, SlapFive recommends using pagination to retrieve 1,000 records at a time. To do this, include the limit and the offset parameters as URL parameters like this:
 
-&#x20;   ?limit=1000\&offset=0
+```
+?limit=1000&offset=0
+```
 
 or in the body of the request, like this:
 
-&#x20;  {\
-&#x20;    "limit": 1000,\
-&#x20;    "offset": 0\
-&#x20;  }
+```
+{
+  "limit": 1000,
+  "offset": 0
+}
+```
 
 ## Created and Last Updated Dates
 
 The SlapFive API GET endpoints all include the Created Date and Last Updated Date for each record in their response output, like this:
 
-{\
-&#x20;"createdAt":"2025-03-06T20:27:45.111289+00:00",\
-&#x20;"updatedAt":"2025-03-06T20:43:45.122277+00:00"\
+```
+{
+ "createdAt":"2025-03-06T20:27:45.111289+00:00",
+ "updatedAt":"2025-03-06T20:43:45.122277+00:00"
 }
+```
 
 ## Get Records based on Last Updated Dates
 
 You can append GET URLs with these two parameters to get records that have been updated within a certain period:
 
-**?since=2025-01-01** \
-This gets all records with an updatedAt date since January 1, 2025, or whatever date you insert.
+This gets all records with an updatedAt date since Junuary 1, 2026, or whatever date you insert.
 
-**?hoursBack=1000**\
+```
+...api/api/customers/?since=2026-01-01
+```
+
 This gets all records with an updatedAt date within the last 1,000 hours, or whatever hours you insert.
+
+<pre><code><strong>...api/api/customers/?hoursBack=1000
+</strong></code></pre>
 
 These parameters are enabled for these objects: Activities, Boards, Companies, Members, Page Views,  Requests, Request Fulfillment Companies/Members, Request Fulfillment Boards, Shares, and Stories.
 
@@ -48,17 +59,23 @@ These parameters are enabled for these objects: Activities, Boards, Companies, M
 
 You can append GET URLs with the field names of the fields you want returned, rather than return all fields, like this example for pulling Member (customer) fields:
 
+```
 ...api/api/customers/?fields=fname,lname,title,email
+```
 
 You can also specify the names of fields from related objects, like this example for pulling Company information for the Members:
 
+```
 ...api/api/customers/?fields=fname,lname,title,email,company.name,company.location
+```
 
 ## Get Data with Role Filters Applied
 
 You can append GET URLs with scope=Role to filter the data returned using the Role Filters for the specified Role. For example, to filter Company data by the filter for the Company entity defined in the Salesforce Role:
 
+```
 ...api/api/companies?scope=Role:Salesforce%20Company
+```
 
 ## Available API endpoints
 
@@ -94,19 +111,27 @@ URL: https://your\_company.slapfive.com/api/api/boards/\<boardID>
 Method: POST\
 URL: https://slapfive.slapfive.com/api/webhooks/subscribe
 
-body: {\
-‘webhook\_url’: the URL that the webhook calls when a Board is created/updated\
-‘webhook\_id’: ‘board’\
+body:&#x20;
+
+```
+{
+'webhook_url': the URL that the webhook calls when a Board is created/updated
+'webhook_id': 'board'
 }
+```
 
 **Unsubscribe:**
 
 Method: POST\
 URL: https://slapfive.slapfive.com/api/webhooks/unsubscribe
 
-body: {\
-‘webhook\_url’: the URL that was subscribed\
+body:&#x20;
+
+```
+{
+'webhook_url': the URL that was subscribed
 }
+```
 
 #### Create or update Board
 
@@ -221,19 +246,27 @@ URL: https://your\_company.slapfive.com/api/api/stories/\<storyID>
 Method: POST\
 URL: https://slapfive.slapfive.com/api/webhooks/subscribe
 
-body: {\
-‘webhook\_url’: the URL that the webhook calls when a Story is created/updated\
-‘webhook\_id’: ‘story’\
+body:&#x20;
+
+```
+{
+ 'webhook_url': the URL that the webhook calls when a Story is created/updated
+ 'webhook_id': 'story'
 }
+```
 
 **Unsubscribe:**
 
 Method: POST\
 URL: https://slapfive.slapfive.com/api/webhooks/unsubscribe
 
-body: {\
-‘webhook\_url’: the URL that was subscribed\
+body:&#x20;
+
+```
+{
+ 'webhook_url': the URL that was subscribed
 }
+```
 
 #### Create or update Story
 
@@ -345,19 +378,26 @@ URL: https://your\_company.slapfive.com/api/api/customers/\<email>
 Method: POST\
 URL: https://slapfive.slapfive.com/api/webhooks/subscribe
 
-body: {\
-‘webhook\_url’: the URL that the webhook calls when a Member is created/updated\
-‘webhook\_id’: ‘member’\
+body:&#x20;
+
+```
+{
+ 'webhook_url': the URL that the webhook calls when a Member is created/updated
+ 'webhook_id': 'member'
 }
+```
 
 **Unsubscribe:**
 
 Method: POST\
 URL: https://slapfive.slapfive.com/api/webhooks/unsubscribe
 
-body: {\
-‘webhook\_url’: the URL that was subscribed\
-}
+body:&#x20;
+
+<pre><code>{
+<strong> 'webhook_url': the URL that was subscribed
+</strong>}
+</code></pre>
 
 #### Create or update Member
 
@@ -513,19 +553,27 @@ URL: https://your\_company.slapfive.com/api/api/companies/?hoursBack=XX
 Method: POST\
 URL: https://slapfive.slapfive.com/api/webhooks/subscribe
 
-body: {\
-‘webhook\_url’: the URL that the webhook calls when a Company is created/updated\
-‘webhook\_id’: ‘company’\
+body:&#x20;
+
+```
+{
+ 'webhook_url': the URL that the webhook calls when a Company is created/updated
+ 'webhook_id': 'company'
 }
+```
 
 **Unsubscribe:**
 
 Method: POST\
 URL: https://slapfive.slapfive.com/api/webhooks/unsubscribe
 
-body: {\
-‘webhook\_url’: the URL that was subscribed\
+body:&#x20;
+
+```
+{
+ 'webhook_url': the URL that was subscribed
 }
+```
 
 #### Create or update Company
 
@@ -646,19 +694,27 @@ URL: https://your\_company.slapfive.com/api/api/activityLogs/?hoursBack=XX
 Method: POST\
 URL: https://slapfive.slapfive.com/api/webhooks/subscribe
 
-body: {\
-‘webhook\_url’: the URL that the webhook calls when an Activity is created/updated\
-‘webhook\_id’: ‘activityLog’\
+body:&#x20;
+
+```
+{
+ 'webhook_url': the URL that the webhook calls when an Activity is created/updated
+ 'webhook_id': 'activityLog'
 }
+```
 
 **Unsubscribe:**
 
 Method: POST\
 URL: https://slapfive.slapfive.com/api/webhooks/unsubscribe
 
-body: {\
-‘webhook\_url’: the URL that was subscribed\
+body:&#x20;
+
+```
+{
+ 'webhook_url': the URL that was subscribed
 }
+```
 
 #### Create or update Activity
 
@@ -746,19 +802,27 @@ URL: https://your\_company.slapfive.com/api/api/requests/\<id>
 Method: POST\
 URL: https://slapfive.slapfive.com/api/webhooks/subscribe
 
-body: {\
-‘webhook\_url’: the URL that the webhook calls when a Request is created/updated\
-‘webhook\_id’: ‘request’\
+body:&#x20;
+
+```
+{
+'webhook_url': the URL that the webhook calls when a Request is created/updated
+'webhook_id': 'request'
 }
+```
 
 **Unsubscribe:**
 
 Method: POST\
 URL: https://slapfive.slapfive.com/api/webhooks/unsubscribe
 
-body: {\
-‘webhook\_url’: the URL that was subscribed\
+body:&#x20;
+
+```
+{
+'webhook_url': the URL that was subscribed
 }
+```
 
 #### Create or update Request
 
@@ -830,48 +894,56 @@ URL: https://your\_company.slapfive.com/api/api/requests/delete
 
 ### Fulfillment Members/Companies
 
-#### Get all Request Fulfillment Members/Companies
+#### Get all Fulfillment Members/Companies
 
 Method: GET\
 URL: https://your\_company.slapfive.com/api/api/requestFulfillmentMembers/
 
-#### Get Request Fulfillment Members/Companies for a Request
+#### Get Fulfillment Members/Companies for a Request
 
 Method: GET\
 URL: https://your\_company.slapfive.com/api/api/requestFulfillmentMembers/\<requestID>
 
-#### Get Request Fulfillment Members/Companies created/changed in last XX hours
+#### Get Fulfillment Members/Companies created/changed in last XX hours
 
 Method: GET\
 URL: https://your\_company.slapfive.com/api/api/requestFulfillmentMembers/?hoursBack=XX
 
-#### Get specific Request Fulfillment Member/Company by ID
+#### Get specific Fulfillment Member/Company by ID
 
 Method: GET\
 URL: https://your\_company.slapfive.com/api/api/requestFulfillmentMembers/\<id>
 
-#### Webhook for new or changed Request Fulfillment Member/Company
+#### Webhook for new or changed Fulfillment Member/Company
 
 **Subscribe:**
 
 Method: POST\
 URL: https://slapfive.slapfive.com/api/webhooks/subscribe
 
-body: {\
-‘webhook\_url’: the URL that the webhook calls when a Request Fulfillment Member is created/updated\
-‘webhook\_id’: ‘fulfillmentMember’\
+body:&#x20;
+
+```
+{
+'webhook_url': the URL that the webhook calls when a Fulfillment Member is created/updated
+'webhook_id': 'fulfillmentMember'
 }
+```
 
 **Unsubscribe:**
 
 Method: POST\
 URL: https://slapfive.slapfive.com/api/webhooks/unsubscribe
 
-body: {\
-‘webhook\_url’: the URL that was subscribed\
-}
+body:&#x20;
 
-#### Create or update Request Fulfillment Member/Company
+```
+{
+'webhook_url': the URL that was subscribed
+}
+```
+
+#### Create or update Fulfillment Member/Company
 
 If a Request Fulfillment Member record exists for the id provided, it updates that record, otherwise it creates a new record. In either case it returns the id.
 
@@ -927,44 +999,50 @@ Required for updating Fulfillment Member/Company: id
 
 ### Fulfillment Boards
 
-#### Get all Request Fulfillment Boards
+#### Get all Fulfillment Boards
 
 Method: GET\
 URL: https://your\_company.slapfive.com/api/api/requestFulfillmentBoards/
 
-#### Get Request Fulfillment Boards for a Request
+#### Get Fulfillment Boards for a Request
 
 Method: GET\
 URL: https://your\_company.slapfive.com/api/api/requestFulfillmentBoards/\<requestID>
 
-#### Get Request Fulfillment Boards created/changed in last XX hours
+#### Get Fulfillment Boards created/changed in last XX hours
 
 Method: GET\
 URL: https://your\_company.slapfive.com/api/api/requestFulfillmentBoards/?hoursBack=XX
 
-#### Get specific Request Fulfillment Board by ID
+#### Get specific Fulfillment Board by ID
 
 Method: GET\
 URL: https://your\_company.slapfive.com/api/api/requestFulfillmentBoards/\<id>
 
-#### Webhook for new or changed Request Fulfillment Board
+#### Webhook for new or changed Fulfillment Board
 
 **Subscribe:**
 
 Method: POST\
 URL: https://slapfive.slapfive.com/api/webhooks/subscribe
 
-body: {\
-‘webhook\_url’: the URL that the webhook calls when a Request Fulfillment Board is created/updated\
-‘webhook\_id’: ‘fulfillmentBoard’\
+body:&#x20;
+
+```
+{
+'webhook_url': the URL that the webhook calls when a Fulfillment Board is created/updated
+'webhook_id': 'fulfillmentBoard'
 }
+```
 
 **Unsubscribe:**
 
 Method: POST\
 URL: https://slapfive.slapfive.com/api/webhooks/unsubscribe
 
-body: {\
+body:&#x20;
+
+{\
 ‘webhook\_url’: the URL that was subscribed\
 }
 
@@ -989,19 +1067,27 @@ URL: https://your\_company.slapfive.com/api/api/campaigns/\<id>
 Method: POST\
 URL: https://slapfive.slapfive.com/api/webhooks/subscribe
 
-body: {\
-‘webhook\_url’: the URL that the webhook calls when a Campaign is created/updated\
-‘webhook\_id’: ‘campaign’\
+body:&#x20;
+
+```
+{
+'webhook_url': the URL that the webhook calls when a Campaign is created/updated
+'webhook_id': 'campaign'
 }
+```
 
 **Unsubscribe:**
 
 Method: POST\
 URL: https://slapfive.slapfive.com/api/webhooks/unsubscribe
 
-body: {\
-‘webhook\_url’: the URL that was subscribed\
+body:&#x20;
+
+```
+{
+'webhook_url': the URL that was subscribed
 }
+```
 
 ***
 
@@ -1024,19 +1110,27 @@ URL: https://your\_company.slapfive.com/api/api/campaign-items/\<id>
 Method: POST\
 URL: https://slapfive.slapfive.com/api/webhooks/subscribe
 
-body: {\
-‘webhook\_url’: the URL that the webhook calls when a Request is created/updated\
-‘webhook\_id’: ‘campaignItem’\
+body:&#x20;
+
+```
+{
+'webhook_url': the URL that the webhook calls when a Request is created/updated
+'webhook_id': 'campaignItem'
 }
+```
 
 **Unsubscribe:**
 
 Method: POST\
 URL: https://slapfive.slapfive.com/api/webhooks/unsubscribe
 
-body: {\
-‘webhook\_url’: the URL that was subscribed\
+body:&#x20;
+
+```
+{
+'webhook_url': the URL that was subscribed
 }
+```
 
 #### Create or update Campaign Item
 
@@ -1081,19 +1175,27 @@ URL: https://your\_company.slapfive.com/api/api/shares/\<id>
 Method: POST\
 URL: https://slapfive.slapfive.com/api/webhooks/subscribe
 
-body: {\
-‘webhook\_url’: the URL that the webhook calls when a Request is created/updated\
-‘webhook\_id’: ‘share’\
+body:&#x20;
+
+```
+{
+'webhook_url': the URL that the webhook calls when a Request is created/updated
+'webhook_id': 'share'
 }
+```
 
 **Unsubscribe:**
 
 Method: POST\
 URL: https://slapfive.slapfive.com/api/webhooks/unsubscribe
 
-body: {\
-‘webhook\_url’: the URL that was subscribed\
+body:&#x20;
+
+```
+{
+'webhook_url': the URL that was subscribed
 }
+```
 
 #### Delete Content Share
 
@@ -1131,19 +1233,27 @@ URL: https://your\_company.slapfive.com/api/api/pageViews/\<id>
 Method: POST\
 URL: https://slapfive.slapfive.com/api/webhooks/subscribe
 
-body: {\
-‘webhook\_url’: the URL that the webhook calls when a Request is created/updated\
-‘webhook\_id’: ‘pageView’\
+body:&#x20;
+
+```
+{
+'webhook_url': the URL that the webhook calls when content is viewed
+'webhook_id': 'pageView'
 }
+```
 
 **Unsubscribe:**
 
 Method: POST\
 URL: https://slapfive.slapfive.com/api/webhooks/unsubscribe
 
-body: {\
-‘webhook\_url’: the URL that was subscribed\
+body:&#x20;
+
+```
+{
+'webhook_url': the URL that was subscribed
 }
+```
 
 #### Delete Content View
 
@@ -1218,19 +1328,27 @@ URL: https://your\_company.slapfive.com/api/api/prompts/delete
 Method: POST\
 URL: https://slapfive.slapfive.com/api/webhooks/subscribe
 
-body: {\
-‘webhook\_url’: the URL that the webhook calls when a Request is created/updated\
-‘webhook\_id’: ‘sentPrompt’\
+body:&#x20;
+
+```
+{
+'webhook_url': the URL that the webhook calls when a Survey/Prompt is sent/responded to
+'webhook_id': 'promptInvitation'
 }
+```
 
 **Unsubscribe:**
 
 Method: POST\
 URL: https://slapfive.slapfive.com/api/webhooks/unsubscribe
 
-body: {\
-‘webhook\_url’: the URL that was subscribed\
+body:&#x20;
+
+```
+{
+'webhook_url': the URL that was subscribed
 }
+```
 
 #### Get all Sent Prompts and Responses
 
@@ -1327,35 +1445,39 @@ Required: \
 \
 **Sample JSON request data:**
 
-\[\
-&#x20;  {\
-&#x20;     "id": "cmjx1gxlz0guv0oqz5zj4ghyh",\
-&#x20;     "name": "Take a Reference Call",\
-&#x20;     "activityCategory": "Advocacy",\
-&#x20;     "activityCategory\_id": "id",\
-&#x20;     "points": 100;\
-&#x20;     "includeOnRequestForm": true,\
-&#x20;     "allowBonusOptions": false,\
-&#x20;     "parent": "Reference Activities",\
-&#x20;     "parent\_id": "id"\
-&#x20;  }\
+```
+[
+   {
+      "id": "cmjx1gxlz0guv0oqz5zj4ghyh",
+      "name": "Take a Reference Call",
+      "activityCategory": "Advocacy",
+      "activityCategory_id": "id",
+      "points": 100;
+      "includeOnRequestForm": true,
+      "allowBonusOptions": false,
+      "parent": "Reference Activities",
+      "parent_id": "id"
+   }
 ]
+```
 
 **Sample JSON output:**
 
-\[\
-&#x20;  {\
-&#x20;      "id": "cmjx1gxlz0guv0oqz5zjmghyh",\
-&#x20;      "name": "Case Study Interview",\
-&#x20;      "points": 100,\
-&#x20;      "includeOnRequestForm": true,\
-&#x20;      "allowBonusOptions": false,\
-&#x20;      "parent\_id": null,\
-&#x20;      "activityCategory\_id": null,\
-&#x20;      "\_\_typename": "ActivityType",\
-&#x20;      "success": "inserted"\
-&#x20;  }\
+```
+[
+   {
+       "id": "cmjx1gxlz0guv0oqz5zjmghyh",
+       "name": "Case Study Interview",
+       "points": 100,
+       "includeOnRequestForm": true,
+       "allowBonusOptions": false,
+       "parent_id": null,
+       "activityCategory_id": null,
+       "__typename": "ActivityType",
+       "success": "inserted"
+   }
 ]
+```
 
 #### Create or Update Dynamic Field Picklist Values
 
