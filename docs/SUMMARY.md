@@ -55,6 +55,7 @@
     * [Version History](integrations/salesforce/slapfive-advanced-app/version-history.md)
     * [Troubleshooting](integrations/salesforce/slapfive-advanced-app/troubleshooting/README.md)
       * [Connection Failed - Action failed due to server error](integrations/salesforce/slapfive-advanced-app/troubleshooting/connection-failed-action-failed-due-to-server-error.md)
+    * [Salesforce's Mandatory Security Updates for Connected Apps and ECAs](integrations/salesforce/slapfive-advanced-app/salesforces-mandatory-security-updates-for-connected-apps-and-ecas.md)
   * [Synchronize Data between Salesforce and SlapFive](integrations/salesforce/synchronize-data-between-salesforce-and-slapfive/README.md)
     * [Determine the Salesforce integration user](integrations/salesforce/synchronize-data-between-salesforce-and-slapfive/determine-the-salesforce-integration-user.md)
     * [Allow the integration user to update closed Opportunities](integrations/salesforce/synchronize-data-between-salesforce-and-slapfive/allow-the-integration-user-to-update-closed-opportunities.md)
