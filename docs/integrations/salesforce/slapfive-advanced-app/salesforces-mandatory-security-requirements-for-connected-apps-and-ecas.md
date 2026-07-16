@@ -4,7 +4,7 @@ description: >-
   apply to the SlapFive Advanced App, this section explains why
 ---
 
-# Salesforce's Mandatory Security Updates for Connected Apps and ECAs
+# Salesforce's Mandatory Security Requirements for Connected Apps and ECAs
 
 On March 18, 2026, Salesforce issued new [Mandatory Security Updates for Connected Apps and ECAs](https://partners.salesforce.com/pdx/s/pcnews/mandatory-security-updates-for-connected-apps-and-ecas-MCFBLDLDQ2TVDZFA22GLAMBVEZGY?language=en_US) that **must be implemented** by Partners enrolled in the AppExchange program in their Partner Applications for any CAs/ECAs that are included or used in connection with a Partner Application, provided or created by the Partner, and in use by more than 2+ customer production orgs by **May 11, 2026**.
 
@@ -25,3 +25,11 @@ The SlapFive Connected App contains no OAuth configuration, so PKCE and refresh-
 #### Allowlist Ranges for Refresh Tokens
 
 Since there are no Refresh Tokens, Allowlist Ranges don't apply.
+
+#### Workato supports these security requirements
+
+The only component of SlapFive's technology stack impacted by these new Salesforce security requirements is Workato, which SlapFive embeds as our integration and automation server. Workato, which establishes OAuth connections to Salesforce using an Integration User, implemented full support for these requirements as of July 15, 2026.
+
+[Click here to see Workato's OAuth documentation.](https://docs.workato.com/en/connectors/salesforce/custom-oauth.html)
+
+[Click here to see SlapFive's documentation page for setting up the Integration User](../synchronize-data-between-salesforce-and-slapfive/determine-the-salesforce-integration-user.md), which includes the Workato IP Ranges.
