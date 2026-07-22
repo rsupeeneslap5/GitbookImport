@@ -6,6 +6,10 @@ description: >-
 
 # Revenue Influence
 
+### Upgrade to the latest version of the Salesforce App
+
+You must be on the latest version of the SlapFive Advanced Salesforce App. [Click here to install or upgrade](https://docs.slapfive.com/integrations/salesforce/slapfive-advanced-app).
+
 ### Set up Revenue Influence in Client Settings
 
 1. Go to **Admin > Client Settings > Revenue Influence** tab.
