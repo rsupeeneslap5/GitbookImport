@@ -35,6 +35,7 @@
       * [Nominate an Advocate](getting-started/slapfive-best-practices/slapfive-sfdc-app/nominate-an-advocate.md)
       * [Track Influenced Events](getting-started/slapfive-best-practices/slapfive-sfdc-app/track-influenced-events.md)
   * [How SlapFive uses Workato](getting-started/how-slapfive-uses-workato.md)
+  * [Revenue Influence](getting-started/revenue-influence.md)
 
 ## INTEGRATIONS
 
