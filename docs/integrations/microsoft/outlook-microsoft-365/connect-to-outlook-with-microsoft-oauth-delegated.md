@@ -5,7 +5,7 @@ description: >-
   references@company.com or advocacy@company.com.
 ---
 
-# Connect to Outlook
+# Connect to Outlook with Microsoft OAuth (Delegated)
 
 Microsoft Outlook uses **Authorization Code Grant (Delegated Authentication)** for enabling SlapFive's automation engine to connect to Outlook to send emails. This method connects to Outlook using **delegated authentication**, meaning emails are sent **on behalf of a signed-in mailbox user.**
 
@@ -71,4 +71,4 @@ No passwords are shared with SlapFive.
 
 
 
-[CC-based auth](connect-to-outlook-with-client-credentials-based-auth.md).
+[CC-based auth](connect-to-outlook-with-with-client-credentials-based-auth.md).

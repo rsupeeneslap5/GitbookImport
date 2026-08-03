@@ -26,9 +26,9 @@ To protect the security and privacy of your Seismic data, SlapFive's Embedded In
    * [ ] **Authentication type:** Select **OAuth 2 (authorization code grant)**.
    * [ ] **Endpoint has case-sensitive headers?**: Leave this set to **No**.
    * [ ] **OAuth2 authorization URL:** Paste your authorization URL, which should like like this:\
-     &#xNAN;_&#x68;ttps://auth.seismic.com/tenants/\<your\_tenant>/connect/authorize?response\_type=code_
+     _&#x68;ttps://auth.seismic.com/tenants/\<your\_tenant>/connect/authorize?response\_type=code_
    * [ ] **OAuth2 token URL:** Paste your token URL, which should look like this:\
-     &#xNAN;_&#x68;ttps://auth.seismic.com/tenants/\<your\_tenant>/connect/token_
+     _&#x68;ttps://auth.seismic.com/tenants/\<your\_tenant>/connect/token_
    * [ ] **OAuth2 client ID:** In the SlapFive App you just created in Seismic, copy the **Client id (client\_id)** and paste it here.
    * [ ] **OAuth2 client secret:** In the SlapFive App you just created in Seismic, copy the **Client secret (client\_secret)** and paste it here.
    * [ ] **How does the API require credentials to be sent to request a token?:** Select **Header**.

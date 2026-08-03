@@ -1,12 +1,11 @@
 ---
 description: >-
-  This section shows how to set up Client Credentials-based authentication so
-  automated workflows can send emails from standard addresses such as
+  This section shows how to set up Client Credentials/Service Principal-based
+  authentication so workflows can send emails from standard addresses such as
   references@company.com or advocacy@company.com.
-hidden: true
 ---
 
-# Connect to Outlook with Client Credentials-based auth
+# Connect to Outlook with with client credentials-based auth
 
 ### Prerequisites
 
@@ -34,7 +33,7 @@ Enter the following data and click **Register**.
 Open the new app and go to **Manage > API permissions.** Select **+ Add a permission** and select **Microsoft Graph APIs**.
 
 1. **What type of permissions does your app require?** choose **Application permissions.**\
-   &#xNAN;_(This is required for Client Credentials–based authentication.)_
+   _(This is required for Client Credentials–based authentication.)_
 2. **Select permissions:** the minimum permissions are `Mail.Send`  and  `Mail.ReadWrite` .
 3. Click **Add permissions**.
 4. Back on the **API permissions** page, click **Grant admin consent for \<your organization name>** and confirm. This approves the permissions for all users in the tenant. If this step is skipped, non-admin users who try to create the Workato Outlook connection will see a **“Need admin approval”** message and won’t be able to proceed.
@@ -134,6 +133,10 @@ Use the value returned as the User ID. You'll enter this value later in SlapFive
 ***
 
 ### Step 7. Authorize the App to Send from Mailboxes
+
+{% hint style="info" %}
+**Note:** These instructions use Exchange Online **Role-Based Access Control** (RBAC) for Applications, which is Microsoft's current recommended method for restricting application access to specific mailboxes. Microsoft is rapidly moving customers from **Exchange Application Access Policy** (`New-ApplicationAccessPolicy`) to RBAC.
+{% endhint %}
 
 Grant the app permission to send from specific mailboxes using Exchange Online's Role Based Access Control (RBAC) for Applications.
 
