@@ -1132,6 +1132,66 @@ body:&#x20;
 
 ***
 
+### Referrals
+
+#### Get all Referrals
+
+Method: GET\
+URL: https://your\_company.slapfive.com/api/api/referrals/
+
+#### Get specific Referral by ID
+
+Method: GET\
+URL: https://your\_company.slapfive.com/api/api/referrals/\<id>
+
+#### Webhook for new or changed Referral
+
+**Subscribe:**
+
+Method: POST\
+URL: https://slapfive.slapfive.com/api/webhooks/subscribe
+
+body:&#x20;
+
+```
+{
+'webhook_url': the URL that the webhook calls when a Referral is created/updated
+'webhook_id': 'referral'
+}
+```
+
+**Unsubscribe:**
+
+Method: POST\
+URL: https://slapfive.slapfive.com/api/webhooks/unsubscribe
+
+body:&#x20;
+
+```
+{
+'webhook_url': the URL that was subscribed
+}
+```
+
+#### Create or update Referral
+
+If a Referral record exists for the id provided, it updates that record, otherwise it creates a new record. In either case it returns the id.
+
+Method: POST\
+URL: https://your\_company.slapfive.com/api/api/referrals/\
+Required: \
+\
+**Sample JSON request data:**
+
+```
+{
+"id": "53k3kj6322k45k3224",
+add the rest here,
+}
+```
+
+***
+
 ### Campaigns
 
 #### Get all Campaigns
