@@ -1186,7 +1186,45 @@ Required: \
 ```
 {
 "id": "53k3kj6322k45k3224",
-add the rest here,
+"referredByCstomerId": "5jjfg834kjjsojeruweg",
+"prospectCustomerId": "",                 // Referral is existing Member
+       - OR -
+"prospectCustomer": {                     // Create new Member for Referral
+  "email": "bob@prospect.com",
+  "firstName": "Bob",
+  "lastName": "Jones",
+  "name": "Bob Jones",
+  "title": "VP of Sales",
+  "companyName": "Prospect Inc"
+ },
+"opportunity_id": "",                // Referral is for an existing SlapFive Opportunity
+        - OR -
+"opportunity": {                     // Create a new SlapFive Opportunit for CRM Opp
+  "opportunity_id": "006ABC123",
+  "name": "Prospect Inc - Enterprise",
+  "description": "Enterprise deal sourced from customer referral",
+  "url": "https://mycompany.lightning.force.com/006ABC123",
+  "stage": "Negotiation",
+  "amount": 150000,
+  "is_closed": false,
+  "is_won": false,
+  "close_date": "2026-09-30",
+  "crm_type": "salesforce",
+  "external_account_id": "001ABC789",
+  "type": "New Business",
+  "lead_source": "Referral",
+  "dynamicFields": {
+    "fieldName1": "value",
+    "fieldName2":"value",
+  },
+"referral_date": "2026-04-29",
+"referral_reason": "Great fit for our enterprise plan",
+"reward_or_recognition": "$500 gift card",
+"status": "pending",
+"external_referral_contact_id": "003ABC456",
+"external_referral_account_id": "001ABC789",
+"external_lead_id": "",
+"crm_type": "salesforce"
 }
 ```
 
