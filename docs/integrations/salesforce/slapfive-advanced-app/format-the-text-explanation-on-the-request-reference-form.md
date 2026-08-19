@@ -20,27 +20,4 @@ Click **Save**.
 
 You can use most HTML characters and tags, including these:
 
-| Formatting           | HTML                                      | Result / Description              |
-| -------------------- | ----------------------------------------- | --------------------------------- |
-| **Bold**             | `<b>text</b>`                             | Makes text **bold**               |
-| _Italic_             | `<i>text</i>`                             | Makes text _italic_               |
-| Underline            | `<u>text</u>`                             | Underlines text                   |
-| Line break           | `<br>`                                    | Starts a new line                 |
-| Paragraph            | `<p>text</p>`                             | Creates a separate paragraph      |
-| Bulleted list        | `<ul><li>Item 1</li><li>Item 2</li></ul>` | Creates an indented bulleted list |
-| Numbered list        | `<ol><li>Item 1</li><li>Item 2</li></ol>` | Creates an indented numbered list |
-| Indented block       | `<blockquote>text</blockquote>`           | Indents a block of text           |
-| Bullet               | `&bull;`                                  | •                                 |
-| Non-breaking space   | `&nbsp;`                                  | Inserts a space that won't wrap   |
-| Em dash              | `&mdash;`                                 | —                                 |
-| En dash              | `&ndash;`                                 | –                                 |
-| Right arrow          | `&rarr;`                                  | →                                 |
-| Left arrow           | `&larr;`                                  | ←                                 |
-| Ampersand            | `&amp;`                                   | &                                 |
-| Less than            | `&lt;`                                    | <                                 |
-| Greater than         | `&gt;`                                    | >                                 |
-| Copyright            | `&copy;`                                  | ©                                 |
-| Registered trademark | `&reg;`                                   | ®                                 |
-| Trademark            | `&trade;`                                 | ™                                 |
-| Left double quote    | `&ldquo;`                                 | “                                 |
-| Right double quote   | `&rdquo;`                                 | ”                                 |
+<table data-search="false"><thead><tr><th>Formatting</th><th>HTML</th><th>Result / Description</th></tr></thead><tbody><tr><td><strong>Bold</strong></td><td><code>&#x3C;b>text&#x3C;/b></code></td><td>Makes text <strong>bold</strong></td></tr><tr><td><em>Italic</em></td><td><code>&#x3C;i>text&#x3C;/i></code></td><td>Makes text <em>italic</em></td></tr><tr><td>Underline</td><td><code>&#x3C;u>text&#x3C;/u></code></td><td>Underlines text</td></tr><tr><td>Line break</td><td><code>&#x3C;br></code></td><td>Starts a new line</td></tr><tr><td>Paragraph</td><td><code>&#x3C;p>text&#x3C;/p></code></td><td>Creates a separate paragraph</td></tr><tr><td>Bulleted list</td><td><code>&#x3C;ul>&#x3C;li>Item 1&#x3C;/li>&#x3C;li>Item 2&#x3C;/li>&#x3C;/ul></code></td><td>Creates an indented bulleted list</td></tr><tr><td>Numbered list</td><td><code>&#x3C;ol>&#x3C;li>Item 1&#x3C;/li>&#x3C;li>Item 2&#x3C;/li>&#x3C;/ol></code></td><td>Creates an indented numbered list</td></tr><tr><td>Indented block</td><td><code>&#x3C;blockquote>text&#x3C;/blockquote></code></td><td>Indents a block of text</td></tr><tr><td>Bullet</td><td><code>&#x26;bull;</code></td><td>•</td></tr><tr><td>Non-breaking space</td><td><code>&#x26;nbsp;</code></td><td>Inserts a space that won't wrap</td></tr><tr><td>Em dash</td><td><code>&#x26;mdash;</code></td><td>—</td></tr><tr><td>En dash</td><td><code>&#x26;ndash;</code></td><td>–</td></tr><tr><td>Right arrow</td><td><code>&#x26;rarr;</code></td><td>→</td></tr><tr><td>Left arrow</td><td><code>&#x26;larr;</code></td><td>←</td></tr><tr><td>Ampersand</td><td><code>&#x26;amp;</code></td><td>&#x26;</td></tr><tr><td>Less than</td><td><code>&#x26;lt;</code></td><td>&#x3C;</td></tr><tr><td>Greater than</td><td><code>&#x26;gt;</code></td><td>></td></tr><tr><td>Copyright</td><td><code>&#x26;copy;</code></td><td>©</td></tr><tr><td>Registered trademark</td><td><code>&#x26;reg;</code></td><td>®</td></tr><tr><td>Trademark</td><td><code>&#x26;trade;</code></td><td>™</td></tr><tr><td>Left double quote</td><td><code>&#x26;ldquo;</code></td><td>“</td></tr><tr><td>Right double quote</td><td><code>&#x26;rdquo;</code></td><td>”</td></tr></tbody></table>
