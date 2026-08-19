@@ -51,6 +51,7 @@
     * [6. Assign Page Layouts to Record Types](integrations/salesforce/slapfive-advanced-app/6.-assign-page-layouts-to-record-types.md)
     * [7. Configure data syncing](integrations/salesforce/slapfive-advanced-app/7.-configure-data-syncing.md)
     * [Recommend the best reference customers for a Request](integrations/salesforce/slapfive-advanced-app/recommend-the-best-reference-customers-for-a-request.md)
+    * [Format the Text Explanation on the Request Reference form](integrations/salesforce/slapfive-advanced-app/format-the-text-explanation-on-the-request-reference-form.md)
     * [Upgrade from SlapFive App to SlapFive Advanced App](integrations/salesforce/slapfive-advanced-app/upgrade-from-slapfive-app-to-slapfive-advanced-app.md)
     * [What version am I on?](integrations/salesforce/slapfive-advanced-app/what-version-am-i-on.md)
     * [Version History](integrations/salesforce/slapfive-advanced-app/version-history.md)
