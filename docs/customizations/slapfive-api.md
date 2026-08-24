@@ -400,6 +400,10 @@ Required for creating a new Asset: \
 }
 ```
 
+#### Create or update Assets in Bulk
+
+Use the same input fields and rules, but pass multiple objects within an array. The maximum body array size is 1000.
+
 ***
 
 ### Members
