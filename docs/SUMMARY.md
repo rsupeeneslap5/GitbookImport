@@ -36,6 +36,9 @@
       * [Track Influenced Events](getting-started/slapfive-best-practices/slapfive-sfdc-app/track-influenced-events.md)
   * [How SlapFive uses Workato](getting-started/how-slapfive-uses-workato.md)
   * [Revenue Influence](getting-started/revenue-influence.md)
+  * [Release Notes](getting-started/release-notes/README.md)
+    * [2026](getting-started/release-notes/2026.md)
+    * [2025](getting-started/release-notes/2025.md)
 
 ## INTEGRATIONS
 
