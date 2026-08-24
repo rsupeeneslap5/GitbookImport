@@ -39,6 +39,12 @@
   * [Release Notes](getting-started/release-notes/README.md)
     * [2026](getting-started/release-notes/2026.md)
     * [2025](getting-started/release-notes/2025.md)
+    * [2024](getting-started/release-notes/2024.md)
+    * [2023](getting-started/release-notes/2023.md)
+    * [2022](getting-started/release-notes/2022.md)
+    * [2021](getting-started/release-notes/2021.md)
+    * [2020](getting-started/release-notes/2020.md)
+    * [2019](getting-started/release-notes/2019.md)
 
 ## INTEGRATIONS
 
