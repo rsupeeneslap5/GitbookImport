@@ -373,6 +373,35 @@ URL: https://your\_company.slapfive.com/api/api/stories/delete
 
 ***
 
+### Assets
+
+#### Create or update Asset
+
+If an Asset record exists with the id, it updates that record, otherwise it creates a new record. In either case it returns the id.
+
+Method: POST\
+URL: https://your\_company.slapfive.com/api/api/assets/\
+Required for updating an Asset:\
+&#x20;    id\
+Required for creating a new Asset: \
+&#x20;    url
+
+```
+{
+"id":"cjy4vfgam01e23257xg44ihd3",
+"url":"https://sandbox.com/asdfsadf",
+"filename":"ABC Company.pdf",             // optional to override the detected filename
+"label":"ABC Company Case Study",
+"visibility":"Public",                    // Public or Private
+"tags":"",
+"transcription":"This is the transcription of the file",
+"companyAttachment_id":"",
+"memberAttachment_id":""
+}
+```
+
+***
+
 ### Members
 
 #### Get all Members
