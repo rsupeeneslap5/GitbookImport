@@ -1219,16 +1219,7 @@ Required: \
 ```
 {
 "id": "53k3kj6322k45k3224",
-"referredByCustomerId": "",               // Referrer is existing Member: id or email
-       - OR -
-"referredByCustomer": {                   // Create new Member for Referrer
-  "name": "Joe Allen",
-  "fname": "Joe",
-  "lname": "Allen",
-  "title": "CMO",
-  "email": "joe.allen@amazonnnn.com",
-  "companyName": "Amazon.com, Inc."
- },
+"referredByCustomerId": "",               // Referrer's id or email
 "prospectCustomerId": "",                 // Referral is existing Member
        - OR -
 "prospectCustomer": {                     // Create new Member for Referral
