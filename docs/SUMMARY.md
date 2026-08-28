@@ -185,6 +185,8 @@
   * [Bring UserEvidence Survey Responses and Assets into SlapFive](integrations/userevidence/bring-userevidence-survey-responses-and-assets-into-slapfive.md)
 * [Wrike](integrations/wrike/README.md)
   * [Connect to Wrike](integrations/wrike/connect-to-wrike.md)
+* [Workfront](integrations/workfront/README.md)
+  * [Connect to Workfront](integrations/workfront/connect-to-workfront.md)
 
 ## Customizations
 
