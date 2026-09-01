@@ -12,6 +12,7 @@
     * [SlapFive Self Guide Enablement](getting-started/slapfive-best-practices/slapfive-self-guide-enablement/README.md)
       * [Understanding the SlapFive Data Model](getting-started/slapfive-best-practices/slapfive-self-guide-enablement/understanding-the-slapfive-data-model/README.md)
         * [Understanding Membership Profiles](getting-started/slapfive-best-practices/slapfive-self-guide-enablement/understanding-the-slapfive-data-model/understanding-membership-profiles.md)
+        * [Standard vs Dynamic Fields](getting-started/slapfive-best-practices/slapfive-self-guide-enablement/understanding-the-slapfive-data-model/standard-vs-dynamic-fields.md)
         * [Member and Company Creation](getting-started/slapfive-best-practices/slapfive-self-guide-enablement/understanding-the-slapfive-data-model/member-and-company-creation.md)
       * [Workstreams & Workflow Automations](getting-started/slapfive-best-practices/slapfive-self-guide-enablement/workstreams-and-workflow-automations/README.md)
         * [Workflow Automations](getting-started/slapfive-best-practices/slapfive-self-guide-enablement/workstreams-and-workflow-automations/workflow-automations.md)
