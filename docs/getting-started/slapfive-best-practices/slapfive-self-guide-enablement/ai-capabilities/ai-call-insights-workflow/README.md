@@ -7,6 +7,8 @@ description: >-
 
 # AI Call Insights Workflow
 
+<figure><img src="../../../../../.gitbook/assets/image (40).png" alt=""><figcaption></figcaption></figure>
+
 #### Start With Clear Goals
 
 Define what you want to measure or monitor:
