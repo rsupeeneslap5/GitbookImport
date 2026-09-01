@@ -40,7 +40,7 @@ For each [Activity Type](slapfive-terminology.md#activity-types), you assign an 
 
 Members are the people who belong to your program and to whom you want to offer opportunities to engage such as capturing their voice. Member records usually represent your clients, but can also be employees, partners, or thought leaders. Your members have a full profile including their name, title, image, and [Company ](slapfive-terminology.md#companies)details.
 
-### Prompts
+### Prompts/Surveys
 
 A Prompt is a question or statement used to offer an opportunity to engage and/or elicit a specific response from a [Member](slapfive-terminology.md#members). Prompts can be defined to allow responses via video, audio, text, numeric, file or link.
 
