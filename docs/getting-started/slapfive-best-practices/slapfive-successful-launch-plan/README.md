@@ -1,6 +1,6 @@
 ---
 description: >-
-  The first 4 weeks are vital to your success, staying on plan and on target
+  The first 30 days are vital to your success, staying on plan and on target
   with your goal live date and our best practices will set you up for success.
 ---
 
@@ -21,9 +21,7 @@ Project Management Success Planning tied to you designated Go Live Date
   * establish additional integrations for forms and reminders
 * Customized goal-oriented success plans for your configurations and launch&#x20;
 * Customer Success Manager for training and enablement
-
-
-
+* Weekly Implementation calls
 * Train-the-trainer resources&#x20;
 
 With a dedicated team focused on completing priority projects, we will end our onboarding process by achieving our established launch goals.&#x20;
