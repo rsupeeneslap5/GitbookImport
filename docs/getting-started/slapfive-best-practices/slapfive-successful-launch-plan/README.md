@@ -6,8 +6,8 @@ description: >-
 
 # SlapFive Successful Launch Plan
 
-* Discovery Workshop: In this phase you will meet your onboarding team who will assist in establishing your onboarding launch goals and timelines.​ We will review documents, discuss your strategic priorities, and understand your definition of success.  This plan is built and followed by the customer in Arrows.
-* Migration and Integration Workshops:  Simultaneous with discovery, this stage of the process is where we collaborate with your IT and SFDC team, your identified executive leader, and primary contact champion, as well as our technical implementation team to facilitate discovery around your technical needs to support your goals. This will include outlining the technical steps necessary to support your onboarding. This plan will be outlined in a custom Gantt chart google sheet.
+* Discovery Workshop: In this phase you will meet your onboarding team who will assist in establishing your onboarding launch goals and timelines.​ We will review documents, discuss your strategic priorities, and understand your definition of success. &#x20;
+* Migration and Integration Workshops:  Simultaneous with discovery, this stage of the process is where we collaborate with your IT and SFDC team, your identified executive leader, and primary contact champion, as well as our technical implementation team to facilitate discovery around your technical needs to support your goals. This will include outlining the technical steps necessary to support your onboarding.&#x20;
 
 Your onboarding and implementation experience will include:
 
