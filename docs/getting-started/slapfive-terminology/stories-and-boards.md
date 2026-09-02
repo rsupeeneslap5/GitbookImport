@@ -1,21 +1,16 @@
+---
+description: >-
+  Stories can be defined as Individual responses captured from a single Member
+  to a single Prompt. Boards are commonly known as Template-driven collections
+  of Stories designed for a specific use case
+---
+
 # Stories & Boards
 
-Individual responses captured from a single Member to a single Prompt.
+<figure><img src="../../.gitbook/assets/SlapFive Terminology  (5).jpg" alt=""><figcaption></figcaption></figure>
 
-Stories can be submitted in audio, video, text, numeric, file, or link format and can be filtered using various criteria.
+<figure><img src="../../.gitbook/assets/SlapFive Terminology  (6).jpg" alt=""><figcaption></figcaption></figure>
 
-<br>
+HTML and CSS configurations that define the visual design and layout of a Board.
 
-<img src="../../.gitbook/assets/unknown (21).png" alt="" height="189" width="493">
-
-### Boards
-
-Template-driven collections of Stories designed for a specific use case
-
-Boards can exist as standalone pages or as embeddable widgets that can be placed on websites, blogs, landing pages, portals, or social media properties.
-
-Boards are Template based: HTML and CSS configurations that define the visual design and layout of a Board. Multiple layouts and options to fit your needs.
-
-<br>
-
-<img src="../../.gitbook/assets/unknown (22).png" alt="" height="291" width="607">
+<figure><img src="../../.gitbook/assets/SlapFive Terminology  (7).jpg" alt=""><figcaption></figcaption></figure>
