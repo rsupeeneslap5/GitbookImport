@@ -6,8 +6,8 @@ description: Internal Customer Marketing Request and Sales Requests
 
 There is room and capaibility to manage both types of workflows with the SlapFive reference module.
 
-Internal requests made by team members to ask customers for participation or customer-generated content.&#x20;
+Internal requests made by team members to ask customers for participation or customer-generated content. Speakers, customer stories, and PR asks.
 
-Requests are commonly used for sales reference requests but can also support PR, analyst relatio
+Requests are commonly used for sales reference requests with self service options as well as white glove reference management
 
-<img src="../../.gitbook/assets/unknown (23).png" alt="" height="230" width="518">
+<figure><img src="../../.gitbook/assets/image (42).png" alt=""><figcaption></figcaption></figure>
