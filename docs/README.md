@@ -10,8 +10,8 @@ description: >-
 [slapfive-explained.md](getting-started/slapfive-explained.md)
 {% endcontent-ref %}
 
-{% content-ref url="getting-started/slapfive-terminology.md" %}
-[slapfive-terminology.md](getting-started/slapfive-terminology.md)
+{% content-ref url="getting-started/slapfive-terminology/" %}
+[slapfive-terminology](getting-started/slapfive-terminology/)
 {% endcontent-ref %}
 
 ### INTEGRATIONS
