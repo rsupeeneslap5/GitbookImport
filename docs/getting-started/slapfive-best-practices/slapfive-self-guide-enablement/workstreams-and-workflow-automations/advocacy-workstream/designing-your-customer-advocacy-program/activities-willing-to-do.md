@@ -1,4 +1,12 @@
+---
+description: >-
+  Watch here to learn more about how to set up Activities Willing to do, Parent
+  and Child Activites, and how to log Activities.
+---
+
 # Activities Willing to Do
+
+{% embed url="https://drive.google.com/file/d/11uYw-YV3M_7iugFKi6Va1Kyl2mWmoqcH/view?usp=sharing" %}
 
 * Activity Types represent the different ways that customers can engage with the company and each other when they participate in the customer voice program.
 * Each Activity Type has an Engagement Score, which represents the score that a customer receives for participating in this Activity, and is used to calculate Customer Engagement Scores.

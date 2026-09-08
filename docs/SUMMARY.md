@@ -25,7 +25,6 @@
         * [Member & Company Image Uploading](getting-started/slapfive-best-practices/slapfive-self-guide-enablement/understanding-the-slapfive-data-model/member-and-company-image-uploading.md)
         * [Member & Company Profiles FAQ](getting-started/slapfive-best-practices/slapfive-self-guide-enablement/understanding-the-slapfive-data-model/member-and-company-profiles-faq.md)
       * [Workstreams & Workflow Automations](getting-started/slapfive-best-practices/slapfive-self-guide-enablement/workstreams-and-workflow-automations/README.md)
-        * [Workflow Automations](getting-started/slapfive-best-practices/slapfive-self-guide-enablement/workstreams-and-workflow-automations/workflow-automations.md)
         * [Request Management](getting-started/slapfive-best-practices/slapfive-self-guide-enablement/workstreams-and-workflow-automations/request-management/README.md)
           * [Managing new reference requests (Manual)](getting-started/slapfive-best-practices/slapfive-self-guide-enablement/workstreams-and-workflow-automations/request-management/managing-new-reference-requests-manual/README.md)
             * [Request Manual Fulfillment Workflow](getting-started/slapfive-best-practices/slapfive-self-guide-enablement/workstreams-and-workflow-automations/request-management/managing-new-reference-requests-manual/request-manual-fulfillment-workflow/README.md)

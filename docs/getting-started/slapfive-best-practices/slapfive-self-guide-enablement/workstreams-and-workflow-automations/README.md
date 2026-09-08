@@ -4,8 +4,6 @@ description: Implementation Workstreams
 
 # Workstreams & Workflow Automations
 
-There is an Advocacy workstream, a Community Workstream, a Reference Workstream and a Referral Workstram
-
 A SlapFive program can support multiple customer engagement workstreams. While the same customer may participate across several workstreams, each has a different objective, audience, workflow, and measure of success.
 
 The four primary workstreams are:
