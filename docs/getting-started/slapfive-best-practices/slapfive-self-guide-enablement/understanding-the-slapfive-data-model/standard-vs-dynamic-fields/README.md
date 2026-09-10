@@ -1,5 +1,9 @@
 # Standard vs Dynamic Fields
 
+## Watch an on demand video to learn more:
+
+{% embed url="https://drive.google.com/file/d/16TzLAClynHH2u12WsSATKumFlkKm-aR4/view?usp=sharing" %}
+
 ## Standard Fields vs. Dynamic Fields
 
 SlapFive profiles can contain both standard fields our custom dynamic fields unique to your business and values.

@@ -7,7 +7,13 @@ description: >-
 
 # Understanding Membership Profiles
 
-### &#x20;Profiles, Data & Filtering in SlapFive
+
+
+{% embed url="https://drive.google.com/file/d/1QQHpTRU12b9TVjjndkKoIxnxWYUOo4GO/view?usp=sharing" %}
+
+
+
+### Profiles, Data & Filtering in SlapFive
 
 Member profiles are the foundation of how SlapFive identifies, organizes, activates, and measures customer advocates.
 

@@ -36,7 +36,7 @@ Sales, marketing, customer success, and advocacy teams may all interact with req
 • Track fulfillment outcomes\
 • Monitor request completion rates
 
-<br>
+{% embed url="https://drive.google.com/file/d/1ju-xcN1OiNw20SZkSIpHlTHl1-Z4RV7n/view?usp=sharing" %}
 
 
 
