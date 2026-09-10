@@ -8,4 +8,4 @@ Organizations that Members are associated with. A Company can have multiple Memb
 
 People tracked in SlapFive, including active, inactive, or prospective participants. Members typically represent customers but can also include employees, partners, or thought leaders. Member profiles contain personal details, company associations, and engagement metrics. The terms “members” and “contacts” are used interchangeably.
 
-<br>
+{% embed url="https://drive.google.com/file/d/16RM7CnLv4eleeCpzRSILVex1rsv6wS1w/view?usp=sharing" %}
