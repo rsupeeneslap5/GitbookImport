@@ -13,7 +13,7 @@ description: >-
 2. Human Coordination: Manually select advocates for high-touch, strategic outreach.
 3. Cross-Team Visibility: Ensure sales, marketing, and success teams collaborate efficiently.
 
-<br>
+{% embed url="https://drive.google.com/file/d/13lysfkskA-aC17VzHxZU4-FfkG4OYfm_/view" %}
 
 **How It Works — Step by Step**
 
