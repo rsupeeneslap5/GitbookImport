@@ -24,3 +24,6 @@ Once you are successfully connected, you will see SlapFive in the list of connec
 
 NOTE: When executing Prompts that access SlapFive data, each time Claude Cowork uses a SlapFive AI Skill for the first time, it will ask you for permission. Just click the **Allow for this task** button or click **Enter** to proceed.
 
+
+
+{% embed url="https://drive.google.com/file/d/1o_0xzUH6kFVRZP-U0yi2ity0TEzB6Stv/view" %}
