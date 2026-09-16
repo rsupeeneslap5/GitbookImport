@@ -6,95 +6,90 @@ description: >-
 
 # Connect to Gmail
 
-SlapFive's Embedded Integration and Automation module allows you to send emails from any Google Workspace business Gmail account that belongs to your corporate domain. You cannot send directly from an Alias, a Google Group, a collaborative inbox, a shared mailbox that is not a Gmail account with a username and password, or a personal Gmail account.
+The Gmail connection must be authenticated using a **Google Workspace Gmail account that can sign in to Gmail**. You cannot authenticate the connection using an alias, Google Group, collaborative inbox, or other shared address that does not have its own Gmail account.
 
-Since most SlapFive users want to send from a shared email address like **references@mycompany.com** or **customers@mycompany.com**, there are two methods you can use to set it up:
+You can, however, **send emails from an alias or Google Group address** if that address is configured as a **Send mail as** address for the Gmail account used to connect SlapFive.
 
-1. If the shared email address is a Gmail account that has a direct login with username and password, connect to Gmail using that Gmail account. (Preferred)
-2. If the shared email address is an Alias and not a full Gmail account, connect to Gmail using any corporate Gmail account and follow the additional steps below for [Send emails from an Alias](connect-to-gmail.md#send-emails-from-an-alias).
+For example, if you want SlapFive to send from [**references@mycompany.com**](mailto:references@mycompany.com), use one of these methods:
 
-For both methods, do the following:
+1. **Dedicated Gmail account:** If `references@mycompany.com` is a Google Workspace Gmail account with its own login, connect SlapFive using that account. This is the preferred method.
+2. **Alias or Google Group:** If `references@mycompany.com` is an alias, Google Group, or other shared address without its own Gmail login, connect SlapFive using a corporate Gmail account that has been configured to **Send mail as** `references@mycompany.com`. Then follow the Send emails from an Alias instructions below.
 
 ### **Connect SlapFive to Gmail**
 
-* [ ] Go to **SlapFive Settings → Integrations**.&#x20;
-* [ ] Click on the name of the Gmail connection you need to connect.
-* [ ] Leave everything set to default values and click the **Sign in with Google** button.
-* [ ] On the Sign in with Google screen, select the Google Account for the shared email address' Gmail Account if you're using method 1, or your own corporate Gmail account if you're using method 2.
-* [ ] On the next screen, Google tells you that Workato will access your Google account, click **Continue**.
-* [ ] On the final screen, Google tells you what permissions will be shared, click **Allow**.
-* [ ] Once you are successfully connected, you are taken back to the SlapFive Integrations tab screen and the button should now say **Disconnect**, and you should see a green <mark style="color:green;">**Connection success**</mark> message.
+Go to **SlapFive Settings → Integrations**.&#x20;
+
+* [ ] Click on the Gmail connection you need to connect.
+* [ ] Leave the connection settings at their default values and click **Sign in with Google**.
+* [ ] Select the Google Workspace Account you want SlapFive to use:
+  * [ ] For a dedicated Gmail account, select that account.
+  * [ ] For an alias or Google Group, select the corporate Gmail account that has permission to **Send mail as** the shared address.
+* [ ] When Google tells you that Workato will access your Google account, click **Continue**.
+* [ ] Review the requested permissions and click **Allow**.
+* [ ] After the connection completes, you will return to SlapFive Settings > Integrations. The connection should display **Disconnect** and a green <mark style="color:green;">**Connection success**</mark> message.
 
 ### Grant the Workato OAuth app access to Google services
 
-Have your Google Workspace Admin do the following:
+Your Google Workspace Admin may need to authorize the Workato OAuth app for your domain.
 
-* [ ] Go to [https://admin.google.com](https://admin.google.com).
-* [ ] In the left navigation, select **Security → API Controls → App Access Control**.
-* [ ] Find and click the Workato OAuth app, which will appear as an OAuth app after any user in your Google Workspace domain has attempted a Gmail connection using a corporate Gmail account. Connecting with a personal Gmail account or an alias will NOT make the OAuth app appear. You will find it by looking under Configured apps for Workato or Workato Gmail Connector.&#x20;
-* [ ] Click **Change Access**.
-* [ ] Choose **Trusted: Can access all Google services**. Gmail blocks sending unless the OAuth app is explicitly trusted at the domain level.
-* [ ] Save your changes.
+1. Go to the **Google Admin Console**.
+2. Select **Security → API Controls → App Access Control**.
+3. Find the Workato OAuth app under **Configured apps**. It may appear as **Workato** or **Workato Gmail Connector**.
+4. Click **Change Access**.
+5. Select **Trusted: Can access all Google services**.
+6. Save your changes.
+
+The Workato OAuth app will typically appear after a user in your Google Workspace domain has attempted to connect Gmail from SlapFive.
 
 ### Verify Access to Gmail API Scopes
 
-* [ ] Inside the app detail page, review the list of requested scopes, and make sure it includes:
-  * `https://www.googleapis.com/auth/gmail.send`
-* [ ] Make sure none are blocked.
-* [ ] Confirm the app is permitted to use Gmail scopes for the domain.
+In the Workato app details in the Google Admin Console:
 
-### **Send emails from an Alias**
+1. Review the requested OAuth scopes.
+2. Confirm that the following Gmail scope is included:\
+   `https://www.googleapis.com/auth/gmail.send`
+3. Make sure the scope is not blocked and that the app is permitted to access Gmail for your domain.
 
-Do these additional steps only for method 2, where you plan to send emails from an Alias or shared inbox:
+### Send emails from an Alias or Google Group
 
-#### **Add the Alias to Your Gmail Account**
+Follow these additional steps if you want SlapFive to send from an address that does not have its own Gmail login, such as `references@mycompany.com`.
 
-You must add the shared email address as a “Send mail as” identity under your own Gmail account.
+#### Add the Shared Address to Your Gmail Account
 
-* [ ] Log into Gmail with your corporate account.
-* [ ] Click the gear icon → **See all settings**.
-* [ ] Go to the **Accounts** tab.
-* [ ] In the **Send mail as:** section, click **Add another email address**.
-* [ ] Enter the shared email address (e.g., references@yourcompany.com).
-* [ ] When asked how you want to send mail, choose: **Send through Gmail (easier to set up).** Do not choose the option to send through an external SMTP server. Workato cannot use external SMTP configurations.
-* [ ] Gmail will send a verification email to the shared address. Depending on how it is configured, it may forward to individual users or to your IT admin.
-* [ ] Enter the verification code to complete setup.
-* [ ] Confirm the alias now appears in the “Send mail as” list with a **Verified** label.
+The shared address must appear as a **Send mail as** identity in the Gmail account connected to SlapFive.
 
-If you do not see the shared address as Verified, Gmail will not allow Workato to send as it.
+1. Sign in to Gmail using the corporate account you connected to SlapFive.
+2. Click **Settings → See all settings**.
+3. Open the **Accounts** tab.
+4. Under **Send mail as**, click **Add another email address**.
+5. Enter the shared email address, such as `references@mycompany.com`.
+6. Complete Google's verification process.
+7. Confirm that the shared address appears under **Send mail as**.
 
-#### **Make Sure You Have Permission to “Send As” the Alias**
+#### If the Address Is a Google Group
 
-Your Google Workspace Admin must confirm you are allowed to send emails as the shared address:
+If the shared address is a Google Group, your Google Workspace Admin may also need to allow you to send as the group.
 
-* [ ] Open **Google Groups** in the Admin Console.
-* [ ] Click the group (e.g., references@yourcompany.com).
-* [ ] Go to **Permissions** → **Posting permissions**.
-* [ ] Set **Who can post as the group?** to include **your user account**. If you skip this step, Gmail will accept the alias into your **Send mail as** list but will block mail sending with a 403 error.
-* [ ] Click the **Sav**e button.
+1. Open the group in the Google Admin Console.
+2. Review the group's posting permissions.
+3. Make sure your account is permitted to post or send as the group.
+4. Save any changes.
 
-This tells Google: “This user is allowed to send email as this shared address.”
+#### Verify Sending from Gmail
 
-#### **Verify That Gmail Recognizes You as an Approved Sender**
+Before using the address in SlapFive, test it directly in Gmail:
 
-Back in your own Gmail settings:
+1. Compose a new email.
+2. Select the shared address in the **From** field.
+3. Send a test message.
 
-* [ ] Refresh Gmail.
-* [ ] Go back to Settings → Accounts → **Send mail as**.
-* [ ] Confirm that the shared email address:
-  * appears in your list
-  * shows **Verified**
-  * does **not** show “Error,” “Verification needed,” or “Permission denied”
+If Gmail can successfully send the message using the shared address, SlapFive can use that address when sending through the connected Gmail account.
 
-If it’s Verified here, Gmail will allow the SlapFive integration server (Workato) to send from that address on your behalf.
+#### Reconnect Gmail if Necessary
 
-#### **Reconnect Your Gmail Connection in SlapFive**
+If you added or changed the **Send mail as** configuration after connecting Gmail to SlapFive, reconnecting the Gmail connection can refresh its authorization:
 
-Once the alias is verified and permissions are set:
-
-* [ ] Go to **SlapFive Settings → Integrations**.
-* [ ] Click your Gmail connection.
-* [ ] Click **Disconnect**.
-* [ ] Click **Connect** again and authenticate with your own corporate Gmail address.
-
-This ensures Google refreshes the permission set and SlapFive receives Gmail’s updated list of approved sender identities.
+1. Go to **SlapFive Settings → Integrations**.
+2. Open the Gmail connection.
+3. Click **Disconnect**.
+4. Click **Connect** and authenticate again using the same corporate Gmail account.
