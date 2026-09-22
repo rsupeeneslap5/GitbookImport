@@ -24,13 +24,15 @@ The integration uses OAuth 2.0 Authentication.
 NOTE: No usernames or passwords are ever stored in SlapFive. The Integration Server uses the Refresh Token to silently refresh Access Tokens in the background, without needing the password again.
 {% endhint %}
 
-### Integration User Permissions
+### Object-level Integration User Permissions
 
 The Embedded Integration with Salesforce requires you to establish a Salesforce Connection using a Salesforce Integration User with these permissions:
 
 <table><thead><tr><th width="226">Object</th><th width="146">Permssion Type</th><th>Permission</th></tr></thead><tbody><tr><td>Opportunity</td><td>Object-level</td><td><p>Read, View All</p><p><br>(View All is needed for any automated workflows that listen for specific field changes on Opportunities, such as the referral automation.)</p></td></tr><tr><td></td><td>Field-level</td><td><ul><li>Edit access to the 4 SlapFive custom fields: Influence Count, SlapFive Influence, SlapFive Influence Score, and SlapFive Program.</li><li>Read access to all fields referenced by the SlapFive integration, including any fields configured for synchronization or monitoring: Opportunity Name, Id, Description, Stage, Is Closed, Is Won, Amount, Created Date, Close Date, Type, Lead Source, Account ID.</li><li>Remove or bypass any field validation rules defined for the Salesforce Opportunity object for this user. <br>Example: "You cannot move this Opportunity to Stage 2 without selecting a Meeting Outcome". </li></ul></td></tr><tr><td></td><td>Record-level</td><td><strong>View All</strong> object permission is recommended. If not granted, the Integration User must have record-level visibility to every Opportunity that may be synchronized with SlapFive.</td></tr><tr><td>Account</td><td>Object-level</td><td>Read, View All</td></tr><tr><td></td><td>Field-level</td><td>Read access to all fields referenced by the SlapFive integration, including any fields configured for synchronization or monitoring, such as Industry or Size.</td></tr><tr><td></td><td>Record-level</td><td><strong>View All</strong> object permission is recommended. If not granted, the Integration User must have record-level visibility to every Account that may be synchronized with SlapFive.</td></tr><tr><td>Contact</td><td>Object-level</td><td>Read, View All</td></tr><tr><td></td><td>Field-level</td><td>Read access to all fields referenced by the SlapFive integration, including any fields configured for synchronization or monitoring, such as Title or LinkedIn Profile.</td></tr><tr><td></td><td>Record-level</td><td><strong>View All</strong> object permission is recommended. If not granted, the Integration User must have record-level visibility to every Contact that may be synchronized with SlapFive.</td></tr><tr><td><p>SlapFive Customer Influence</p><p></p><p>SlapFive Customer Influence Activity</p><p></p><p>SlapFive Customer Activity</p><p></p><p>SlapFive Board</p><p></p><p>SlapFive Company</p><p></p><p>SlapFive Contact</p><p></p><p>SlapFive Story</p></td><td>Object-level</td><td>Read, Create, Edit, Delete</td></tr><tr><td>SlapFive Customer Influence</td><td>3 Record Types</td><td>Read and Edit</td></tr><tr><td>SlapFive Customer Influence Activity</td><td>3 Record Types</td><td>Read and Edit</td></tr><tr><td></td><td>Field-level</td><td>Read and Edit access to all fields</td></tr><tr><td></td><td>Record-level</td><td>Access to all records.</td></tr></tbody></table>
 
-The Integration User needs these system permissions to enable the real-time listening for Opportunity, Account and Contact record changes to sync to SlapFive, as this requires CDC registration:
+### System-level Integration User Permissions
+
+The Integration User needs these system permissions to enable the real-time listening for Opportunity, Account and Contact record changes to sync to SlapFive, as this uses Salesforce Change Data Capture (CDC) to listen for Salesforce change events, which requires CDC registration:
 
 * [ ] API Enabled
 * [ ] View Setup and Configuration
@@ -38,6 +40,7 @@ The Integration User needs these system permissions to enable the real-time list
 * [ ] Manage Flow
 * [ ] Flow User
 * [ ] Salesforce API Integration permission set license
+* [ ] View All permission for the object (Contact, Account, Opportunity)
 
 In addition, the Integration User needs access to the setup objects used by the SlapFive Salesforce App:
 
