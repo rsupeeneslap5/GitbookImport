@@ -1706,7 +1706,7 @@ Required for creating new Dynamic Field: label, type, entity\
   "label": "Account Tier",
   "type": "PICKONE",
   "entity": "COMPANY",
-  "data_name": "accountTier",
+  "data_name": "accountTier",                   // let the API generate from the label
   "description": "Salesforce Account Tier",
   "required": false,
   "flag": true,
