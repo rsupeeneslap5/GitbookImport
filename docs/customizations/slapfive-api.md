@@ -975,7 +975,15 @@ Required: needDescription, needByDate\
      "is_won": false,
      "close_date": "2026-06-30",
      "crm_type": "Salesforce",
-     "external_account_id": "001dfsdfgdfgdf"
+     "external_account_id": "001dfsdfgdfgdf",
+     "dynamicFields": {
+       "fieldName1": "value",
+       "fieldName2":"value",
+       "fieldName3": [                      // PICKMANY dynamic field values
+           "Value1",
+           "Value2"
+           ]
+       },
      },
 "preferredCustomers":"IBM, Cisco",
 "archived":false
