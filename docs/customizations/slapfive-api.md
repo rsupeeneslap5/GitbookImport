@@ -1690,7 +1690,72 @@ Required: \
 ]
 ```
 
-#### Create or Update Dynamic Field Picklist Values
+### Create or Update Dynamic Fields
+
+If a Dynamic Field record exists for the id provided, it updates that record, otherwise it creates a new record.
+
+Method: POST\
+URL: https://your\_company.slapfive.com/api/api/dynamic-fields\
+Required for creating new Dynamic Field: label, type, entity\
+\
+**Sample JSON request data:**
+
+```
+{
+  "id": "cmabc123xyz0001",
+  "label": "Account Tier",
+  "type": "PICKONE",
+  "entity": "COMPANY",
+  "data_name": "accountTier",
+  "description": "Salesforce Account Tier",
+  "required": false,
+  "flag": true,
+  "sort": 0,
+  "num_use_thousands_sep": false,
+  "num_decimal_places": null,
+  "num_currency_symbol": null,
+  "override_type": false,
+  "dynamicFieldPickListValues": ["Gold", "Silver", "Bronze"]
+}
+```
+
+**Sample JSON output:**
+
+```
+{
+    "id": "cmupnxqpg18zp0lrgdf23g91p",
+    "label": "Account Tier",
+    "data_name": "accountTier",
+    "type": "PICKONE",
+    "entity_name": "COMPANY",
+    "description": "Salesforce Account Tier",
+    "required": false,
+    "flag": true,
+    "sort": 0,
+    "num_currency_symbol": null,
+    "num_decimal_places": null,
+    "num_use_thousands_sep": false,
+    "dynamicFieldPickListValues": [
+        {
+            "id": "cmupnxqqg18zq0lrxb1lo8e27",
+            "name": "Gold",
+            "order": 0
+        },
+        {
+            "id": "cmupnxqqg18zr0lrxgbdxa1g7",
+            "name": "Silver",
+            "order": 1
+        },
+        {
+            "id": "cmupnxqqg18zs0lrxb699bwmd",
+            "name": "Bronze",
+            "order": 2
+        }
+    ]
+}
+```
+
+### Create or Update Dynamic Field Picklist Values
 
 If a Picklist value record exists for the id provided, it updates that record, otherwise it creates a new record.
 
