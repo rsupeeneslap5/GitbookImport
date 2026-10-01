@@ -963,7 +963,20 @@ Required: needDescription, needByDate\
 "fulfillmentDate": "",
 "assignedTo": "dana@slapfive.com",
 "note": "This is the note field.",
-"opportunityId": "456hg45kj64j25332",
+"opportunityId": "006Hs000009ABCDEF",
+"opportunity": {
+     "opportunity_id": "006Hs000009ABCDEF",
+     "name": "ACME Corp - Enterprise Deal Q2",
+     "description": "New enterprise expansion opportunity",
+     "url": "https://acme.my.salesforce.com/006Hs000009ABCDEF",
+     "stage": "Negotiation/Review",
+     "amount": 450000,
+     "is_closed": false,
+     "is_won": false,
+     "close_date": "2026-06-30",
+     "crm_type": "Salesforce",
+     "external_account_id": "001dfsdfgdfgdf"
+     },
 "preferredCustomers":"IBM, Cisco",
 "archived":false
 }
