@@ -37,7 +37,7 @@
           * [Understanding Campaigns](getting-started/slapfive-best-practices/slapfive-self-guide-enablement/workstreams-and-workflow-automations/advocacy-workstream/understanding-campaigns/README.md)
             * [Job Change Tracker](getting-started/slapfive-best-practices/slapfive-self-guide-enablement/workstreams-and-workflow-automations/advocacy-workstream/understanding-campaigns/job-change-tracker.md)
           * [Prompts and Surveys](getting-started/slapfive-best-practices/slapfive-self-guide-enablement/workstreams-and-workflow-automations/advocacy-workstream/prompts-and-surveys/README.md)
-            * [Surveys (Prompt Groups)](getting-started/slapfive-best-practices/slapfive-self-guide-enablement/workstreams-and-workflow-automations/advocacy-workstream/prompts-and-surveys/surveys-prompt-groups.md)
+            * [Surveys](getting-started/slapfive-best-practices/slapfive-self-guide-enablement/workstreams-and-workflow-automations/advocacy-workstream/prompts-and-surveys/surveys.md)
           * [Understanding Stories and Boards](getting-started/slapfive-best-practices/slapfive-self-guide-enablement/workstreams-and-workflow-automations/advocacy-workstream/understanding-stories-and-boards/README.md)
             * [Creating File or Link type Boards](getting-started/slapfive-best-practices/slapfive-self-guide-enablement/workstreams-and-workflow-automations/advocacy-workstream/understanding-stories-and-boards/creating-file-or-link-type-boards.md)
             * [Template Catalog](getting-started/slapfive-best-practices/slapfive-self-guide-enablement/workstreams-and-workflow-automations/advocacy-workstream/understanding-stories-and-boards/template-catalog.md)
