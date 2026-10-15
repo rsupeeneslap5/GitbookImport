@@ -142,6 +142,8 @@
     * [Troubleshooting](integrations/salesforce/slapfive-app-spring-2024-4.0-and-earlier-versions/troubleshooting.md)
 * [Airtable](integrations/airtable/README.md)
   * [Connect to Airtable](integrations/airtable/connect-to-airtable.md)
+* [Asana](integrations/asana/README.md)
+  * [Connect to Asana](integrations/asana/connect-to-asana.md)
 * [ChurnZero](integrations/churnzero/README.md)
   * [Connect to ChurnZero](integrations/churnzero/connect-to-churnzero.md)
 * [Claude](integrations/claude/README.md)
