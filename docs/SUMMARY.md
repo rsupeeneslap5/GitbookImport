@@ -1,6 +1,7 @@
 # Table of contents
 
 * [Getting Started](README.md)
+  * [Network Architecture Diagram](getting-started/network-architecture-diagram.md)
   * [SlapFive Explained](getting-started/slapfive-explained.md)
   * [SlapFive Terminology](getting-started/slapfive-terminology/README.md)
     * [Core Objects/UI](getting-started/slapfive-terminology/core-objects-ui.md)
@@ -13,7 +14,6 @@
     * [Requests](getting-started/slapfive-terminology/requests.md)
   * [SlapFive Data Model](getting-started/slapfive-data-model/README.md)
     * [Data Model 101 - Members and Companies](getting-started/slapfive-data-model/data-model-101-members-and-companies.md)
-    * [Architecture Diagram](getting-started/slapfive-data-model/architecture-diagram.md)
   * [SlapFive Best Practices](getting-started/slapfive-best-practices/README.md)
     * [SlapFive Successful Launch Plan](getting-started/slapfive-best-practices/slapfive-successful-launch-plan/README.md)
       * [Workshops during Implementation](getting-started/slapfive-best-practices/slapfive-successful-launch-plan/workshops-during-implementation.md)
