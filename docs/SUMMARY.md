@@ -1,7 +1,6 @@
 # Table of contents
 
 * [Getting Started](README.md)
-  * [Network Architecture Diagram](getting-started/network-architecture-diagram.md)
   * [SlapFive Explained](getting-started/slapfive-explained.md)
   * [SlapFive Terminology](getting-started/slapfive-terminology/README.md)
     * [Core Objects/UI](getting-started/slapfive-terminology/core-objects-ui.md)
@@ -12,8 +11,6 @@
     * [Stories & Boards](getting-started/slapfive-terminology/stories-and-boards.md)
     * [Prompts & Surveys](getting-started/slapfive-terminology/prompts-and-surveys.md)
     * [Requests](getting-started/slapfive-terminology/requests.md)
-  * [SlapFive Data Model](getting-started/slapfive-data-model/README.md)
-    * [Data Model 101 - Members and Companies](getting-started/slapfive-data-model/data-model-101-members-and-companies.md)
   * [SlapFive Best Practices](getting-started/slapfive-best-practices/README.md)
     * [SlapFive Successful Launch Plan](getting-started/slapfive-best-practices/slapfive-successful-launch-plan/README.md)
       * [Workshops during Implementation](getting-started/slapfive-best-practices/slapfive-successful-launch-plan/workshops-during-implementation.md)
@@ -67,6 +64,9 @@
       * [View Companies and Permissions](getting-started/slapfive-best-practices/slapfive-sfdc-app/view-companies-and-permissions.md)
       * [Track Influenced Events](getting-started/slapfive-best-practices/slapfive-sfdc-app/track-influenced-events.md)
       * [Salesforce and Platform Integrations](getting-started/slapfive-best-practices/slapfive-sfdc-app/salesforce-and-platform-integrations.md)
+  * [SlapFive Data Model](getting-started/slapfive-data-model/README.md)
+    * [Data Model 101 - Members and Companies](getting-started/slapfive-data-model/data-model-101-members-and-companies.md)
+  * [Network Architecture Diagram](getting-started/network-architecture-diagram.md)
   * [How SlapFive uses Workato](getting-started/how-slapfive-uses-workato.md)
   * [Revenue Influence](getting-started/revenue-influence.md)
   * [SlapFive UpHigh AEO Planning Guide](getting-started/slapfive-uphigh-aeo-planning-guide.md)
