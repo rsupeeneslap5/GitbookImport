@@ -4,4 +4,5 @@ description: This diagram shows the components of SlapFive's Network Architectur
 
 # Network Architecture Diagram
 
-<figure><img src="../.gitbook/assets/SlapFive_Network_Architecture_Diagram.png" alt=""><figcaption></figcaption></figure>
+<figure><img src="../.gitbook/assets/SlapFive_Network_Architecture_Diagram (1).png" alt=""><figcaption></figcaption></figure>
+
