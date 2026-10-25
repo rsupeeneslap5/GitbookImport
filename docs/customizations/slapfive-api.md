@@ -1618,6 +1618,35 @@ URL: https://your\_company.slapfive.com/api/api/opportunities/\<id>
 Method: GET\
 URL: https://your\_company.slapfive.com/api/api/opportunities/\<opportunity\_id>
 
+#### Webhook for New or Changed Opportunity
+
+**Subscribe:**
+
+Method: POST\
+URL: https://slapfive.slapfive.com/api/webhooks/subscribe
+
+body:&#x20;
+
+```
+{
+'webhook_url': the URL that the webhook calls when an Opportunity is created or changed
+'webhook_id': 'opportunityUpdates'
+}
+```
+
+**Unsubscribe:**
+
+Method: POST\
+URL: https://slapfive.slapfive.com/api/webhooks/unsubscribe
+
+body:&#x20;
+
+```
+{
+'webhook_url': the URL that was subscribed
+}
+```
+
 #### Create or update Opportunity
 
 If an Opportunity record exists for the id or opportunity\_id provided, it updates that record, otherwise it creates a new record. In either case it returns the id.
