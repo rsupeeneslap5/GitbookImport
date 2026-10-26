@@ -313,6 +313,12 @@ Required for creating a new Story: \
 "sourceUrl":"",
 "tags":"Qualification",
 "language":"true",
+"aiPublishEnabled":"true",
+"aiSummary": "AI Summary",
+"aiTopics": [
+            "Topic 1",
+            "Topic 2"
+        ],
 "capturedByUserId":"cjy4vfgam01eo0197xg4uihd3",
 "capturedByUserEmail":"user@company.com",
 "capturedDate":"2021-10-24",
