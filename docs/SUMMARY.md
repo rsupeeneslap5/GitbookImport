@@ -241,6 +241,7 @@
 * [Embed customer voice on your website or landing page](customizations/embed-customer-voice-on-your-website-or-landing-page.md)
 * [Access Board and Story lists from within another app](customizations/access-board-and-story-lists-from-within-another-app.md)
 * [Configure Role-Based Permissions](customizations/configure-role-based-permissions.md)
+* [Audit Log API for SIEM Integration](customizations/audit-log-api-for-siem-integration.md)
 
 ## Standard Agreements
 

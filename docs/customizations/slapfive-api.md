@@ -1888,3 +1888,7 @@ Required: \
        "usage": {}
 }
 ```
+
+### Audit Log API for SIEM Integration
+
+[Click here to view details for this endpoint.](slapfive-api.md#audit-log-api-for-siem-integration)
