@@ -2,7 +2,7 @@
 
 ## SlapFive Master Service Agreement
 
-Last updated: October 20, 2023
+Last updated: October 20, 2026
 
 **1.  Definitions:** Certain capitalized terms, not defined above, have the meanings set forth below.
 
