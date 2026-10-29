@@ -128,6 +128,133 @@ Search parameters can be combined with `limit`, `offset`, `hoursBack`, `fields` 
 * If no records match, the endpoint returns `200` with an empty array (`[]`), not a `404`.
 * **Unrecognized parameters are ignored.** If a parameter name doesn’t match a standard field or a dynamic field label, that criterion is silently dropped and the remaining criteria still apply. A misspelled field name or label therefore returns _more_ records than expected, not fewer. If results look broader than expected, check the spelling and capitalization of each parameter name against Client Settings.
 
+## **Advanced Search for Members and Companies**
+
+For more complex queries, use the POST search endpoints. They support OR logic, comparison operators, and referencing dynamic fields by data name.
+
+Method: POST\
+URL: `https://your_company.slapfive.com/api/api/customers/search`\
+URL: `https://your_company.slapfive.com/api/api/companies/search`
+
+**Request body**
+
+json
+
+```json
+{
+  "match": "all",
+  "criteria": [
+    {
+      "field": "email",
+      "value": "jsmith@abcindustries.com",
+      "operator": "_eq",
+      "isDynamicField": false,
+      "relatedEntity": null
+    }
+  ]
+}
+```
+
+| Parameter                   | Required | Description                                                                                                                                   |
+| --------------------------- | -------- | --------------------------------------------------------------------------------------------------------------------------------------------- |
+| `match`                     | No       | `all` (default) returns records matching every criterion (AND). `any` returns records matching at least one criterion (OR).                   |
+| `criteria`                  | Yes      | Array of conditions.                                                                                                                          |
+| `criteria[].field`          | Yes      | A standard field name, or the dynamic field’s **data name** when `isDynamicField` is `true`.                                                  |
+| `criteria[].value`          | Yes      | The value to compare against.                                                                                                                 |
+| `criteria[].operator`       | No       | Comparison operator. Defaults to `_eq`. See the operators table below.                                                                        |
+| `criteria[].isDynamicField` | No       | Set to `true` to target a dynamic field. Defaults to `false`.                                                                                 |
+| `criteria[].relatedEntity`  | No       | Set to `company` on a Member search to filter on the Member’s Company, or `customers` on a Company search to filter on the Company’s Members. |
+
+> **Note:** Advanced Search identifies dynamic fields by their **data name** (for example `preferredIndustry`), not by their label. This differs from the GET search, which uses labels. Data names are listed in Get Client Settings under `DynamicFields`.
+
+**Operators**
+
+| Operator       | Meaning                                        |
+| -------------- | ---------------------------------------------- |
+| `_eq`          | Equals (default)                               |
+| `_neq`         | Does not equal                                 |
+| `_like`        | Matches a pattern (case-sensitive)             |
+| `_ilike`       | Matches a pattern (case-insensitive)           |
+| `_gt` / `_gte` | Greater than / greater than or equal to        |
+| `_lt` / `_lte` | Less than / less than or equal to              |
+| `_in`          | Matches any value in a list                    |
+| `_nin`         | Matches no value in a list                     |
+| `_is_null`     | Field is empty (`true`) or not empty (`false`) |
+
+If no records match, the endpoint returns `200` with an empty array (`[]`).
+
+**Examples**
+
+Exact match on a standard field:
+
+json
+
+```json
+POST /api/api/customers/search
+{ "criteria": [ { "field": "email", "value": "jsmith@abcindustries.com" } ] }
+```
+
+Members whose Company name matches, case-insensitive:
+
+json
+
+```json
+POST /api/api/customers/search
+{ "criteria": [ { "field": "name", "value": "Acme Corp", "relatedEntity": "company", "operator": "_ilike" } ] }
+```
+
+Members by a dynamic field value:
+
+json
+
+```json
+POST /api/api/customers/search
+{ "criteria": [ { "field": "personas", "value": "Support", "isDynamicField": true } ] }
+```
+
+Members matching either of two values (OR):
+
+json
+
+```json
+POST /api/api/customers/search
+{
+  "match": "any",
+  "criteria": [
+    { "field": "email", "value": "jsmith@abcindustries.com" },
+    { "field": "salesforceContactId", "value": "0031234567890ABC" }
+  ]
+}
+```
+
+Companies by name:
+
+json
+
+```json
+POST /api/api/companies/search
+{ "criteria": [ { "field": "name", "value": "Acme Corp" } ] }
+```
+
+Companies that have a Member with a given email:
+
+json
+
+```json
+POST /api/api/companies/search
+{ "criteria": [ { "field": "email", "value": "jsmith@abcindustries.com", "relatedEntity": "customers" } ] }
+```
+
+**Choosing between GET search and Advanced Search**
+
+|                              | GET search (URL parameters)         | Advanced Search (POST)                          |
+| ---------------------------- | ----------------------------------- | ----------------------------------------------- |
+| Logic                        | AND only                            | AND or OR                                       |
+| Operators                    | Equals only                         | `_eq`, `_ilike`, `_gt`, `_in`, and more         |
+| Dynamic fields identified by | Label                               | Data name                                       |
+| Unrecognized fields          | Silently ignored                    | _(to confirm)_                                  |
+| Best for                     | Quick lookups with a few conditions | Complex queries, partial matches, ranges, lists |
+
 ## Available API endpoints
 
 ***
@@ -498,6 +625,8 @@ Returns all Members matching the criteria. Use standard Member field names, Memb
 ...api/api/customers/?company[Tier]=Enterprise
 ```
 
+For OR logic, partial matches, or comparison operators, use Advanced Search: POST /api/api/customers/search. See [_Advanced Search for Members and Companies_](slapfive-api.md#advanced-search-for-members-and-companies).
+
 #### Webhook for new or changed Member
 
 **Subscribe:**
@@ -697,6 +826,8 @@ Returns all Companies matching the criteria. Use standard Company field names, C
 ...api/api/companies/?Tier=Gold
 ...api/api/companies/?customers[email]=jsmith@abcindustries.com
 ```
+
+For OR logic, partial matches, or comparison operators, use **Advanced Search**: `POST /api/api/companies/search`. See [_Advanced Search for Members and Companies_](slapfive-api.md#advanced-search-for-members-and-companies).
 
 #### Webhook for new or changed Company
 
