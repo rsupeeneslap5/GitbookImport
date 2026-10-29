@@ -42,7 +42,7 @@ The SlapFive API GET endpoints all include the Created Date and Last Updated Dat
 
 You can append GET URLs with these two parameters to get records that have been updated within a certain period:
 
-This gets all records with an updatedAt date since Junuary 1, 2026, or whatever date you insert.
+This gets all records with an updatedAt date since January 1, 2026, or whatever date you insert.
 
 ```
 ...api/api/customers/?since=2026-01-01
@@ -76,6 +76,57 @@ You can append GET URLs with scope=Role to filter the data returned using the Ro
 ```
 ...api/api/companies?scope=Role:Salesforce%20Company
 ```
+
+## **Search Members and Companies by Field Values**
+
+You can append the Members and Companies GET URLs with search parameters to return only the records that match. Each parameter name is either a standard field name or a dynamic field label:
+
+* **Standard fields:** use the field’s API name, such as `lname`, `email`, `industry` or `salesforceAccountId`.
+* **Dynamic fields:** use the field’s **Label** as shown in Client Settings, such as `Preferred Industry`. Do not use its data name. URL-encode spaces and special characters.
+
+```
+...api/api/customers/?lname=Smith
+...api/api/customers/?Preferred%20Industry=Healthcare
+...api/api/companies/?Tier=Gold
+```
+
+Multiple parameters are combined with AND:
+
+```
+...api/api/customers/?lname=Smith&Preferred%20Industry=Healthcare
+```
+
+**Searching on related records**
+
+To filter Members by fields on their Company, wrap the Company field name or dynamic field label in `company[...]`:
+
+```
+...api/api/customers/?company[name]=Acme%20Corp
+...api/api/customers/?company[Account%20Tier]=Gold
+...api/api/customers/?lname=Smith&company[name]=Acme%20Corp
+```
+
+To return Companies that have at least one Member matching a field, wrap the Member field name or dynamic field label in `customers[...]`:
+
+```
+...api/api/companies/?customers[email]=jsmith@abcindustries.com
+...api/api/companies/?customers[Preferred%20Industry]=Healthcare
+```
+
+Bracketed and top-level parameters are always combined with AND.
+
+**Combining with other parameters**
+
+Search parameters can be combined with `limit`, `offset`, `hoursBack`, `fields` and `scope`:
+
+```
+...api/api/customers/?lname=Smith&hoursBack=720&fields=fname,lname,email&limit=100&offset=0
+```
+
+**Results**
+
+* If no records match, the endpoint returns `200` with an empty array (`[]`), not a `404`.
+* **Unrecognized parameters are ignored.** If a parameter name doesn’t match a standard field or a dynamic field label, that criterion is silently dropped and the remaining criteria still apply. A misspelled field name or label therefore returns _more_ records than expected, not fewer. If results look broader than expected, check the spelling and capitalization of each parameter name against Client Settings.
 
 ## Available API endpoints
 
@@ -434,6 +485,19 @@ URL: https://your\_company.slapfive.com/api/api/customers/\<memberID>
 Method: GET\
 URL: https://your\_company.slapfive.com/api/api/customers/\<email>
 
+#### **Search Members by field values**
+
+Method: GET\
+URL: `https://your_company.slapfive.com/api/api/customers/?<field>=<value>`
+
+Returns all Members matching the criteria. Use standard Member field names, Member dynamic field labels, or `company[...]` to filter by the Member’s Company. See [_Search Members and Companies by Field Values_](slapfive-api.md#search-members-and-companies-by-field-values) for details.
+
+```
+...api/api/customers/?fname=Jeff
+...api/api/customers/?Community%20Member%3F=true
+...api/api/customers/?company[Tier]=Enterprise
+```
+
 #### Webhook for new or changed Member
 
 **Subscribe:**
@@ -621,6 +685,19 @@ URL: https://your\_company.slapfive.com/api/api/companies/\<id>
 Method: GET\
 URL: https://your\_company.slapfive.com/api/api/companies/?hoursBack=XX
 
+#### **Search Companies by field values**
+
+Method: GET\
+URL: `https://your_company.slapfive.com/api/api/companies/?<field>=<value>`
+
+Returns all Companies matching the criteria. Use standard Company field names, Company dynamic field labels, or `customers[...]` to return Companies with a matching Member. See _Search Members and Companies by Field Values_ for details.
+
+```
+...api/api/companies/?industry=Manufacturing
+...api/api/companies/?Tier=Gold
+...api/api/companies/?customers[email]=jsmith@abcindustries.com
+```
+
 #### Webhook for new or changed Company
 
 **Subscribe:**
@@ -657,7 +734,7 @@ If a Company record exists with the name or salesforceAccountId provided, it upd
 Method: POST\
 URL: https://your\_company.slapfive.com/api/api/companies/\
 Required for updating a Company: name OR salesforceAccountId\
-Required for creating new Member: name\
+Required for creating new Company: name\
 Required for updating the Company's name: id, new name.\
 Required for updating the Company's salesforceAccountId: id, new salesforceAccountId.
 
@@ -671,7 +748,7 @@ Required for updating the Company's salesforceAccountId: id, new salesforceAccou
 "logoUrl":"https://www.anyimageurl.com",
 "size": "100 employees",
 "industry": "Manufacturing",
-"location": “Houston, TX",
+"location": "Houston, TX",
 "since": "1995",
 "productsOwned": "Product A",
 "competitorsReplaced": "Competitor A",
@@ -1095,7 +1172,7 @@ Required for updating Fulfillment Member/Company: id
 "request_Number": "223",
 "request_Id": "",
 "activityType_name": "Take a reference call",
-"needByDate”: "2026-04-29",
+"needByDate": "2026-04-29",
 "customer_id":"5jjfg834kjjsojeruweg",
 "customer_email": "fred@bigcompany.com",
 "customer_salesforceContactId": "456hg45kj64j25332",
