@@ -69,7 +69,7 @@
   * [Network Architecture Diagram](getting-started/network-architecture-diagram.md)
   * [How SlapFive uses Workato](getting-started/how-slapfive-uses-workato.md)
   * [Revenue Influence](getting-started/revenue-influence.md)
-  * [SlapFive UpHigh AEO Planning Guide](getting-started/slapfive-uphigh-aeo-planning-guide.md)
+  * [UpHigh AEO Configuration and Customization](getting-started/uphigh-aeo-configuration-and-customization.md)
   * [Release Notes](getting-started/release-notes/README.md)
     * [2026](getting-started/release-notes/2026.md)
     * [2025](getting-started/release-notes/2025.md)
