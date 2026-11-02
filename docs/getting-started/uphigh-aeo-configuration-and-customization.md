@@ -18,7 +18,7 @@ This guide covers custom-domain setup, sitemap discovery, branding, templates, a
 Recommended address:
 
 ```
-https://customerstories.{your-domain}.com/customer-stories
+https://customervoice.{your-domain}.com/customer-stories
 ```
 
 Every SlapFive instance already has a required SlapFive subdomain, established during instance setup. Your UpHigh microsite uses that existing address:
@@ -27,7 +27,7 @@ Every SlapFive instance already has a required SlapFive subdomain, established d
 https://{your-slapfive-subdomain}.slapfive.com/customer-stories
 ```
 
-**A custom domain is optional, but strongly recommended for production use.** Publishing at an address such as `customerstories.your-domain.com` places your customer evidence on a domain your organization controls, making its connection to your brand explicit in the URLs that visitors, search engines, and answer engines encounter. Combined with links from your corporate website, consistent branding, and accurate structured metadata, this provides a clearer basis for identifying the content as an official, brand-published source rather than relying on a third-party hosting address alone.
+**A custom domain is strongly recommended for production use.** Publishing at an address such as `customervoice.your-domain.com` places your customer evidence on a domain your organization controls, making its connection to your brand explicit in the URLs that visitors, search engines, and answer engines encounter. Combined with links from your corporate website, consistent branding, and accurate structured metadata, this provides a clearer basis for identifying the content as an official, brand-published source rather than relying on a third-party hosting address alone.
 
 This is a source-attribution and brand-trust recommendation—not a guarantee that crawlers assign a specific authenticity score, that the microsite automatically inherits the parent website's ranking signals, or that a custom domain increases rankings or AI citations. The custom domain is a branded address for your existing instance; it does not replace the required SlapFive subdomain.
 
@@ -40,16 +40,16 @@ Ask your DNS administrator to create:
 | Setting        | Value                                                |
 | -------------- | ---------------------------------------------------- |
 | Type           | CNAME                                                |
-| Host / Name    | `customerstories`                                    |
+| Host / Name    | `customervoice`                                      |
 | Target / Value | `app.slapfive.com`                                   |
 | TTL            | Your provider's default, or 300 seconds during setup |
 
-Some providers expect the full hostname, `customerstories.your-domain.com`, rather than just `customerstories`.
+Some providers expect the full hostname, `customervoice.your-domain.com`, rather than just `customerstories`.
 
 Equivalent DNS zone entry:
 
 ```dns
-customerstories.your-domain.com. 300 IN CNAME app.slapfive.com.
+customervoice.your-domain.com. 300 IN CNAME app.slapfive.com.
 ```
 
 Do not change the DNS for your apex domain or `www` website. Have your DNS administrator resolve any conflicting records at the new hostname. If you use DNS proxying, a corporate CDN, or restrictive certificate-authority authorization (CAA) policies, coordinate these with SlapFive before activation; they can affect routing, validation, and certificate issuance. Do not disable existing security controls to complete setup.
@@ -83,7 +83,7 @@ Work with your SlapFive administrator to select the Stories approved for public 
 The UpHigh sitemap is served at the hostname root:
 
 ```
-https://customerstories.example.com/sitemap.xml
+https://customervoice.example.com/sitemap.xml
 ```
 
 It is **not** served at `/customer-stories/sitemap.xml`. UpHigh generates the sitemap from eligible published content; you do not need to maintain individual Story URLs manually.
@@ -102,13 +102,13 @@ If your corporate sitemap, such as `https://www.example.com/sitemap.xml`, is a *
 
 ```xml
 <sitemap>
-  <loc>https://customerstories.example.com/sitemap.xml</loc>
+  <loc>https://customervoice.your-domain.com/sitemap.xml</loc>
 </sitemap>
 ```
 
 A sitemap index lists other sitemaps. An ordinary sitemap has a `<urlset>` root and lists web pages: do not add a `<sitemap>` element to it or list the XML sitemap as though it were a content page. If your CMS produces a `<urlset>`, submit the UpHigh sitemap separately or ask your SEO team to configure a proper sitemap index without removing existing coverage.
 
-`www.example.com` and `customerstories.example.com` are different hosts. Google's sitemap-index rules require same-site hosting unless cross-site submission is configured. Have your SEO team confirm ownership verification and cross-site acceptance in Search Console rather than assuming a common parent domain is sufficient. Direct submission of the microsite's own sitemap is a straightforward alternative.
+`www.your-domain.com` and `customervoice.your-domain.com` are different hosts. Google's sitemap-index rules require same-site hosting unless cross-site submission is configured. Have your SEO team confirm ownership verification and cross-site acceptance in Search Console rather than assuming a common parent domain is sufficient. Direct submission of the microsite's own sitemap is a straightforward alternative.
 
 **Also strongly recommended:** add a normal, crawlable link from your corporate website to the customer-story index—for example, from your customer-success or resources section. This gives crawlers and visitors a direct path to the content, independent of sitemap processing. Sitemap references and links support discovery; neither guarantees crawling, indexing, or answer-engine inclusion.
 
