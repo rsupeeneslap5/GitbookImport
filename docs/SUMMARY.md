@@ -122,6 +122,7 @@
   * [Salesforce Automations](integrations/salesforce/salesforce-automations/README.md)
     * [Enable nominate Contacts for your program](integrations/salesforce/salesforce-automations/enable-nominate-contacts-for-your-program.md)
     * [Launch Salesforce Objects from their Object IDs in SlapFive](integrations/salesforce/salesforce-automations/launch-salesforce-objects-from-their-object-ids-in-slapfive.md)
+    * [Report on renewal rates for Accounts with advocates vs no advocates](integrations/salesforce/salesforce-automations/report-on-renewal-rates-for-accounts-with-advocates-vs-no-advocates.md)
   * [SlapFive App - Spring 2024 (4.0) and earlier versions](integrations/salesforce/slapfive-app-spring-2024-4.0-and-earlier-versions/README.md)
     * [1. Install the Package](integrations/salesforce/slapfive-app-spring-2024-4.0-and-earlier-versions/1.-install-the-package.md)
     * [2. Create a Named Credential](integrations/salesforce/slapfive-app-spring-2024-4.0-and-earlier-versions/2.-create-a-named-credential.md)
