@@ -44,7 +44,7 @@ Ask your DNS administrator to create:
 | Target / Value | `app.slapfive.com`                                   |
 | TTL            | Your provider's default, or 300 seconds during setup |
 
-Some providers expect the full hostname, `customervoice.your-domain.com`, rather than just `customerstories`.
+Some providers expect the full hostname, `customervoice.your-domain.com`, rather than just `customervoice`.
 
 Equivalent DNS zone entry:
 
