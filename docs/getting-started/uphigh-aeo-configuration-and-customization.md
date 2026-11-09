@@ -94,7 +94,7 @@ Have your SEO team verify ownership of the microsite in Google Search Console an
 
 UpHigh also advertises its sitemap in the microsite's own `/robots.txt` file.
 
-#### Strongly recommended: include it in your corporate sitemap index
+#### Include the UpHigh sitemap in your corporate sitemap index
 
 **Treat discovery from your established corporate website as a launch priority.** A new microsite may have few or no inbound links, so crawlers may not discover it promptly. Referencing the UpHigh sitemap from your corporate sitemap index provides an additional discovery route through your existing web presence. Do this alongside direct sitemap submission and a crawlable link from the corporate website; do not rely solely on the microsite advertising its own sitemap.
 
