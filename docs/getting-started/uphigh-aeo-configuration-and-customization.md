@@ -1,50 +1,39 @@
 ---
 description: >-
-  This section describes the steps to take to activate SlapFive UpHigh to
-  optimize how your company and products are included in AI bots like ChatGPT,
-  Claude, and Gemini.
+  Activate SlapFive UpHigh to optimize how your company and products are
+  included in conversations your buyers have with AI bots like ChatGPT, Claude,
+  and Gemini.
 ---
 
 # UpHigh AEO Configuration and Customization
 
 ### Overview
 
-UpHigh publishes approved customer evidence on a branded, publicly accessible microsite. It is designed to make customer stories easy for people to read and for search and answer-engine crawlers to discover. Publishing does not guarantee indexing, citations, or search rankings.
-
-This guide covers custom-domain setup, sitemap discovery, branding, templates, and privacy integration. Your web/DNS team, SEO team, and privacy team should coordinate with SlapFive before launch.
+UpHigh publishes approved customer evidence on a branded, publicly accessible microsite. It is designed to make customer stories easy for people to read and for search and answer-engine crawlers to discover. This page covers custom-domain setup, sitemap discovery, branding, templates, and privacy integration.
 
 ### 1. Choose your microsite address
 
-Recommended address:
-
-```
-https://customervoice.{your-domain}.com/customer-stories
-```
-
-Every SlapFive instance already has a required SlapFive subdomain, established during instance setup. Your UpHigh microsite uses that existing address:
+Your UpHigh microsite by default uses your SlapFive instance subdomain:
 
 ```
 https://{your-slapfive-subdomain}.slapfive.com/customer-stories
 ```
 
-**A custom domain is strongly recommended for production use.** Publishing at an address such as `customervoice.your-domain.com` places your customer evidence on a domain your organization controls, making its connection to your brand explicit in the URLs that visitors, search engines, and answer engines encounter. Combined with links from your corporate website, consistent branding, and accurate structured metadata, this provides a clearer basis for identifying the content as an official, brand-published source rather than relying on a third-party hosting address alone.
+**SlapFive strongly recommends that you use a custom domain for your microsite.** Publishing at an address such as `customervoice.your-domain.com` places your customer evidence on a domain your organization controls, making its connection to your brand explicit in the URLs that visitors, search engines, and answer engines encounter. Combined with links from your corporate website, consistent branding, and accurate structured metadata, this provides a clearer basis for identifying the content as an official, brand-published source.
 
-This is a source-attribution and brand-trust recommendation—not a guarantee that crawlers assign a specific authenticity score, that the microsite automatically inherits the parent website's ranking signals, or that a custom domain increases rankings or AI citations. The custom domain is a branded address for your existing instance; it does not replace the required SlapFive subdomain.
+Recommended address:
 
-A custom subdomain does not require moving your main website. DNS maps a hostname, not a URL path: do not put `https://` or `/customer-stories` in a CNAME record.
+```
+https://customervoice.{your-domain}.com
+```
 
 ### 2. Create the DNS record
 
 Ask your DNS administrator to create:
 
-| Setting        | Value                                                |
-| -------------- | ---------------------------------------------------- |
-| Type           | CNAME                                                |
-| Host / Name    | `customervoice`                                      |
-| Target / Value | `app.slapfive.com`                                   |
-| TTL            | Your provider's default, or 300 seconds during setup |
+<table><thead><tr><th width="252.333251953125">Setting</th><th>Value</th></tr></thead><tbody><tr><td>Type</td><td>CNAME</td></tr><tr><td>Host / Name</td><td><code>customervoice</code></td></tr><tr><td>Target / Value</td><td><code>app.slapfive.com</code></td></tr><tr><td>TTL</td><td>Your provider's default, or 300 seconds during setup</td></tr></tbody></table>
 
-Some providers expect the full hostname, `customervoice.your-domain.com`, rather than just `customervoice`.
+Some providers expect the full hostname, `customervoice.your-domain.com`, rather than just `customervoice`. DNS maps a hostname, not a URL path: do not put `https://` or `/customer-stories` in a CNAME record.
 
 Equivalent DNS zone entry:
 
@@ -54,27 +43,38 @@ customervoice.your-domain.com. 300 IN CNAME app.slapfive.com.
 
 Do not change the DNS for your apex domain or `www` website. Have your DNS administrator resolve any conflicting records at the new hostname. If you use DNS proxying, a corporate CDN, or restrictive certificate-authority authorization (CAA) policies, coordinate these with SlapFive before activation; they can affect routing, validation, and certificate issuance. Do not disable existing security controls to complete setup.
 
-Send the full hostname to SlapFive after creating the record.
+### 3. Activate the domain in SlapFive
 
-### 3. Activate the domain with SlapFive
+In SlapFive, go to **Admin Menu → Client Settings → Advanced**.&#x20;
 
-The CNAME alone does not activate your microsite. SlapFive must associate the hostname with your account, configure UpHigh routing and its supporting assets/discovery endpoints, and provision a valid HTTPS certificate.
+1. In the **Customer Custom Domain** field, paste the full sub-domain you created in Step 2.
+2. Click the **Save** Domain button.
+3. Click the **Verify** DNS button. If the DNS record was created correctly, you'll see a success message that the domain was verified. If you get an error, then check the CNAME record.
+4. Go to your microsite and confirm that it renders properly. Check that:
 
-Before announcing the site, confirm with SlapFive that:
-
-* DNS resolves correctly and HTTPS works without certificate warnings.
-* The custom hostname shows your organization's content, not another account's content.
-* The story index, a published story, images, and media load correctly.
-* `/sitemap.xml`, `/robots.txt`, and `/llms.txt` are reachable on the custom hostname.
-* The sitemap and page canonical tags use the agreed public hostname.
-
-Agree on one primary public hostname before submitting URLs to search engines. Do not assume the SlapFive-hosted address automatically redirects to your custom hostname; confirm the intended behavior during activation.
+* [ ] DNS resolves correctly and HTTPS works without certificate warnings.
+* [ ] The story index, a published story, images, and media load correctly.
+* [ ] `/sitemap.xml`, `/robots.txt`, and `/llms.txt` are reachable on the custom hostname.
+* [ ] The sitemap and page canonical tags use the agreed public hostname.
 
 ### 4. Enable publishing and choose content
 
-In your client workspace, open **Settings → UpHigh AEO** and enable UpHigh. Supply the brand description used in `llms.txt`.
+In SlapFive, go to **Admin Menu → Settings → UpHigh AEO** and do the following:
 
-Work with your SlapFive administrator to select the Stories approved for public use and enable their UpHigh publication. Account-level enablement does not replace individual content approval. Review customer consent, attribution, and usage permissions before publishing.
+* [ ] **Enable UpHigh for this Client:** Check this box.
+* [ ] **Brand Description:** Paste a 1-2 sentence description of your company. This description appears in your llms.txt file to help AI systems understand your brand context.
+
+SlapFive automatically publishes the microsite so that it contains:
+
+1. A home page.
+2. A page for each Story that is enabled for UpHigh.
+3. A page for each Journey Question that contains at least one Story attached to it.
+4. A page for each Member who has contributed at least one Story.
+
+To enable Stories for UpHigh:
+
+* [ ] Edit your SlapFive Prompts to point to one or more **Journey Questions**. This causes every Story for that Prompt to also be attached to that Journey Question.
+* [ ] Check the **Enabled for UpHigh** field for each Story. You can bulk update many Stories using the Bulk Update feature.
 
 ### 5. Connect the microsite to search discovery
 
