@@ -1900,6 +1900,28 @@ URL: https://your\_company.slapfive.com/api/api/opportunities/\
 }
 ```
 
+### Influence Events & Activities
+
+#### Get all Influence Events
+
+Method: GET\
+URL: https://your\_company.slapfive.com/api/api/influence-events/
+
+#### Get a specific Influence Event by internal ID
+
+Method: GET\
+URL: https://your\_company.slapfive.com/api/api/influence-events/\<id>
+
+#### Get all Influence Activities
+
+Method: GET\
+URL: https://your\_company.slapfive.com/api/api/influence-activities/
+
+#### Get a specific Influence Activity by internal ID
+
+Method: GET\
+URL: https://your\_company.slapfive.com/api/api/influence-activities/\<id>
+
 ### Client Settings
 
 #### Get Client Settings
